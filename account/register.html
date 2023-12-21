@@ -17,14 +17,36 @@
       crossorigin="anonymous"
     />
   </head>
+  <body>
+    <section class="header">
+      <h1>Registration</h1>
+    </section>
   <body class="bg-success-subtle">
     <section class="header">
       <h1 class="">Registration</h1>
     </section>
 
     <section class="regFormOne">
+      <form id="registerForm">
+        <h1>Don't have an account?</h1>
       <form class="text-center" id="registerForm">
         <h1>Don't have an account?</h1>
+
+        <label for="emailInput">Email:</label>
+        <input type="email" placeholder="Enter e-mail" id="emailInput" />
+        <br />
+        <label for="usernameInput">Username:</label>
+        <input type="text" placeholder="Create username" id="usernameInput" />
+        <br />
+        <label for="passwordInput">Create Password:</label>
+        <input type="password" placeholder="Enter password here" id="passwordInput" />
+        <br />
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" placeholder="Re-enter password" id="confirmPassword" />
+        <br />
+        <button type="button" onclick="registerUser()">Create account</button>
+      </form>
+    </section>
 
         <section class="formValue"><label for="emailInput">Email:</label> <br /></section>
         <input type="email" placeholder="Enter e-mail" id="emailInput" />
