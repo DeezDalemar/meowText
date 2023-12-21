@@ -9,24 +9,40 @@
     <link rel="stylesheet" href="global.css" />
 
     <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="register.css" />
 
-    <title>Login to the Microblog Network!</title>
+    <title>Register on the Microblog Network!</title>
   </head>
   <body>
     <header>
-      <nav>
-        
-      </nav>
+      <nav></nav>
     </header>
 
     <main>
       <h1>Register</h1>
+      <form id="registerForm">
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" minlength="3" required />
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" minlength="6" required />
+        </div>
+
+        <div>
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" minlength="6" required />
+        </div>
+
+        <button type="button" onclick="registerUser()">Register</button>
+      </form>
     </main>
 
     <footer></footer>
 
     <!-- Page-specific code -->
-    <script src="index.js"></script>
+    <script src="register.js"></script>
   </body>
 </html>
