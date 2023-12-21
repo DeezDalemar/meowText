@@ -17,7 +17,7 @@ function getSignInData() {
       username: username.value,
       fullName: fullName.value,
       password: password.value,
-    }
-    
-    return userInfo
+   };
+
+   return userInfo;
 }
