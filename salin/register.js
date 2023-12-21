@@ -28,4 +28,5 @@ registerUser();
 
 function registerNewUser(emailInput, usernameInput, passwordInput) {
   alert("Registration successful! You can now log in.");
+  window.location.href = "";
 }
