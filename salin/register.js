@@ -1,26 +1,31 @@
 "use strict";
+
 function registerUser() {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
+  const emailInput = document.getElementById("emailInput").value;
+  const usernameInput = document.getElementById("usernameInput").value;
+  const passwordInput = document.getElementById("passwordInput").value;
   const confirmPassword = document.getElementById("confirmPassword").value;
 
-  if (password !== confirmPassword) {
-    alert("Passwords do not match!");
+  if (passwordInput !== confirmPassword) {
+    alert("Password do not match!");
     return;
   }
 
-  if (username.trim() === "" || password.trim() === "" || confirmPassword.trim() === "") {
+  if (
+    emailInput.trim() === "" ||
+    usernameInput.trim() === "" ||
+    passwordInput.trim() === "" ||
+    confirmPassword.trim() === ""
+  ) {
     alert("Please fill in all fields before submitting.");
     return;
   }
 
-  //   console.log("Registration successful! You can now log in.");
-  registerNewUser(username, password);
+  registerNewUser(emailInput, usernameInput, passwordInput);
 }
 
 registerUser();
 
-function registerNewUser(username, password) {
+function registerNewUser(emailInput, usernameInput, passwordInput) {
   alert("Registration successful! You can now log in.");
-  window.location.href = "";
 }
