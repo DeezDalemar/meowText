@@ -1,39 +1,28 @@
 "use strict";
 
-const emailInput = document.querySelector("#emailInput");
+const fullnameInput = document.querySelector("#emailInput");
 const usernameInput = document.querySelector("#usernameInput");
 const passwordInput = document.querySelector("#passwordInput");
 const confirmPassword = document.querySelector("#confirmPassword");
 
-const submitButton = document.querySelector("#submitButton")
+const submitButton = document.querySelector("#submitButton");
 
-submitButton.addEventListener("click", registerUser)
-
+submitButton.addEventListener("click", registerUser);
 
 function registerUser() {
-   if (passwordInput.value != confirmPassword.value) {
-      console.log("passwords didnt match");
-   }
-
-    if (
-        emailInput.value.trim() === "" ||
+   if (
+      emailInput.value.trim() === "" ||
       usernameInput.value.trim() === "" ||
       passwordInput.value.trim() === "" ||
       confirmPassword.value.trim() === ""
    ) {
       console.log("submit all fields before submitting");
-  
+   } else if (passwordInput.value != confirmPassword.value) {
+      console.log("passwords didnt match");
+   } else {
+      createAccount();
    }
-
-   registerNewUser(emailInput, usernameInput, passwordInput);
 }
-
-
-
-function registerNewUser(emailInput, usernameInput, passwordInput) {
-   alert("Registration successful! You can now log in.");
-}
-
 
 async function createAccount() {
    let response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/users", {
@@ -43,13 +32,16 @@ async function createAccount() {
       },
       body: JSON.stringify(getSignInData()),
    });
+   let data = await response.json();
+   console.log(data);
+   window.location.assign("http://127.0.0.1:5502/account/login.html");
 }
 
 function getSignInData() {
    let userInfo = {
-      username: username.value,
-      fullName: fullName.value,
-      password: password.value,
+      username: usernameInput.value,
+      fullName: fullnameInput.value,
+      password: passwordInput.value,
    };
 
    return userInfo;
