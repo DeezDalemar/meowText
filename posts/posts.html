@@ -1,292 +1,280 @@
 <!-- POSTS page -->
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-      <link rel="stylesheet" href="../global.css" />
-      <link rel="stylesheet" href="posts.css" />
+    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <link rel="stylesheet" href="../global.css" />
 
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="posts.css" />
 
-      <title>/POSTS</title>
+    <title>/POSTS</title>
 
-      <!-- Run BEFORE page is finished loading (before window.onload): -->
-      <script src="../account/auth.js"></script>
-      <script>
-         if (isLoggedIn() === false) {
-            window.location.replace("../account/login.html");
-         }
-      </script>
-   </head>
-   <body>
-      <header>
-         <nav>
-            <div class="container">
-               <h2 class="logo">MeowText</h2>
-               <div class="search-bar">
-                  <i class="uil"></i>
-                  <input type="search" placeholder="Search for creators, inspirations, and projects" />
-               </div>
-               <div class="log">
-                  <button class="btn">Register</button>
-                  <button class="btn">LogIn</button>
+    <!-- Run BEFORE page is finished loading (before window.onload): -->
+    <script src="../account/auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) {
+        window.location.replace("../account/login.html");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <h2 class="logo">MeowText</h2>
+          <h1>Posts</h1>
+          <div class="log">
+            <button class="btn">Sign Out</button>
+            <div class="profile-photo">
+              <img src="#" alt="" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="left">
+          <a class="profile">
+            <div class="profile-photo">
+              <img src="images/yuji.jpg" alt="" />
+            </div>
+            <div class="handle">
+              <h4>Salin Karki</h4>
+              <p class="text-muted">@blufflemon</p>
+            </div>
+          </a>
+
+          <div class="sidebar">
+            <a class="menu-item">
+              <h3>Home</h3>
+            </a>
+            <a class="menu-item">
+              <h3>Notification</h3>
+            </a>
+            <a class="menu-item">
+              <h3>Messages</h3>
+            </a>
+            <a class="menu-item">
+              <h3>Setting</h3>
+            </a>
+          </div>
+
+          <button class="btn" for="create-post">Create Post</button>
+        </div>
+
+        <div class="middle">
+          <form action="" class="create-post">
+            <div class="profile-photo">
+              <img src="./images/profile-1.jpg" alt="" />
+            </div>
+            <input type="text" placeholder="What's on your mind?" id="create-post" />
+            <input type="submit" value="Post" class="btn" />
+          </form>
+          <div class="feeds">
+            <!----------------- FEED 1 -------------------->
+            <div class="feed">
+              <div class="head">
+                <div class="user">
                   <div class="profile-photo">
-                     <img src="#" alt="" />
+                    <img src="images/puss.jpg" />
                   </div>
-               </div>
-            </div>
-         </nav>
-      </header>
+                  <div class="info">
+                    <h3>Puss in Boots</h3>
+                    <small>15 Minutes Ago</small>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
 
-      <main>
-         <h1>Posts</h1>
-         <div class="container">
-            <div class="left">
-               <a class="profile">
+              <div class="photo">
+                <img src="images/pussinboots.png" />
+              </div>
+
+              <div class="liked-by">
+                <span><img src="images/tom-jerry.png" /></span>
+                <span><img src="images/Garfield_the_Cat.svg" /></span>
+                <span><img src="images/Snowbell.webp" /></span>
+                <p>Liked by <strong>Tom</strong> and <strong>277 others</strong></p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Puss in Boots</strong> Lorem ipsum dolor sit quisquam eius.
+                  <span class="harsh-tag">#lifestyle</span>
+                </p>
+              </div>
+            </div>
+            <!----------------- END OF FEED 1 -------------------->
+
+            <!----------------- FEED 2 -------------------->
+            <div class="feed">
+              <div class="head">
+                <div class="user">
                   <div class="profile-photo">
-                     <img src="images/yuji.jpg" alt="" />
+                    <img src="images/Snowbell.webp" />
                   </div>
-                  <div class="handle">
-                     <h4>Salin Karki</h4>
-                     <p class="text-muted">@blufflemon</p>
+                  <div class="info">
+                    <h3>Snowbell</h3>
+                    <small>2 Hours Ago</small>
                   </div>
-               </a>
+                </div>
+              </div>
 
-               <div class="sidebar">
-                  <a class="menu-item">
-                     <h3>Home</h3>
-                  </a>
-                  <a class="menu-item">
-                     <h3>Notification</h3>
-                  </a>
-                  <a class="menu-item">
-                     <h3>Messages</h3>
-                  </a>
-                  <a class="menu-item">
-                     <h3>Setting</h3>
-                  </a>
-               </div>
+              <div class="photo">
+                <img src="images/snowbell2.webp" />
+              </div>
 
-               <button class="btn" for="create-post">Create Post</button>
+              <div class="liked-by">
+                <span><img src="images/tom-jerry.png" /></span>
+                <span><img src="images/puss.jpg" /></span>
+                <span><img src="images/Garfield_the_Cat.svg" /></span>
+                <p>Liked by <strong>Puss in Boots</strong> and <strong>165 others</strong></p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Snowbell</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, fugiat?
+                  Ipsam voluptatibus beatae facere eos harum voluptas distinctio, officia, facilis sed quisquam esse,
+                  assumenda minima ut. Excepturi sit quis reiciendis!
+                  <span class="harsh-tag">#lifestyle</span>
+                </p>
+              </div>
             </div>
 
-            <div class="middle">
-               <form action="" class="create-post">
+            <!----------------- FEED 3 -------------------->
+            <div class="feed">
+              <div class="head">
+                <div class="user">
                   <div class="profile-photo">
-                     <img src="./images/profile-1.jpg" alt="" />
+                    <img src="images/tom-jerry.png" />
                   </div>
-                  <input type="text" placeholder="What's on your mind?" id="create-post" />
-                  <input type="submit" value="Post" class="btn" />
-               </form>
-               <div class="feeds">
-                  <!----------------- FEED 1 -------------------->
-                  <div class="feed">
-                     <div class="head">
-                        <div class="user">
-                           <div class="profile-photo">
-                              <img src="https://placehold.co/50x50" />
-                           </div>
-                           <div class="info">
-                              <h3>Puss in Boots</h3>
-                              <small>15 Minutes Ago</small>
-                           </div>
-                        </div>
-                        <span class="edit">
-                           <i class="uil uil-ellipsis-h"></i>
-                        </span>
-                     </div>
-
-                     <div class="photo">
-                        <img src="images/pussinboots.png" />
-                     </div>
-
-                     <div class="liked-by">
-                        <span><img src="images/tom-jerry.png" /></span>
-                        <span><img src="images/Garfield_the_Cat.svg" /></span>
-                        <span><img src="images/Snowbell.webp" /></span>
-                        <p>Liked by <b>Tom</b> and <b>277 others</b></p>
-                     </div>
-
-                     <div class="caption">
-                        <p>
-                           <b>Puss in Boots</b> Lorem ipsum dolor sit quisquam eius.
-                           <span class="harsh-tag">#lifestyle</span>
-                        </p>
-                     </div>
-
-                     <div class="comments text-muted">View all 277 comments</div>
+                  <div class="info">
+                    <h3>Tom</h3>
+                    <small>50 Minutes Ago</small>
                   </div>
+                </div>
+              </div>
 
-                  <!----------------- END OF FEED 1 -------------------->
+              <div class="photo">
+                <img src="images/IMG_4401.jpeg" />
+              </div>
 
-                  <!----------------- FEED 2 -------------------->
-                  <div class="feed">
-                     <div class="head">
-                        <div class="user">
-                           <div class="profile-photo">
-                              <img src="images/Snowbell.webp" />
-                           </div>
-                           <div class="info">
-                              <h3>Snowbell</h3>
-                              <small>2 Hours Ago</small>
-                           </div>
-                        </div>
-                     </div>
+              <div class="liked-by">
+                <span><img src="images/Snowbell.webp" /></span>
+                <span><img src="images/pussinboots.png" /></span>
+                <span><img src="images/Garfield_the_Cat.svg" /></span>
+                <p>Liked by <strong>Garfield</strong> and <strong>173 others</strong></p>
+              </div>
 
-                     <div class="photo">
-                        <img src="images/snowbell2.webp" />
-                     </div>
-
-                     <div class="liked-by">
-                        <span><img src="images/tom-jerry.png" /></span>
-                        <span><img src="images/puss.jpg" /></span>
-                        <span><img src="images/Garfield_the_Cat.svg" /></span>
-                        <p>Liked by <b>Puss in Boots</b> and <b>165 others</b></p>
-                     </div>
-
-                     <div class="caption">
-                        <p>
-                           <b>Snowbell</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, fugiat?
-                           Ipsam voluptatibus beatae facere eos harum voluptas distinctio, officia, facilis sed quisquam
-                           esse, assumenda minima ut. Excepturi sit quis reiciendis!
-                           <span class="harsh-tag">#lifestyle</span>
-                        </p>
-                     </div>
-
-                     <div class="comments text-muted">View all 100 comments</div>
-                  </div>
-
-                  <!----------------- FEED 3 -------------------->
-                  <div class="feed">
-                     <div class="head">
-                        <div class="user">
-                           <div class="profile-photo">
-                              <img src="images/tom-jerry.png" />
-                           </div>
-                           <div class="info">
-                              <h3>Tom</h3>
-                              <small>50 Minutes Ago</small>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="photo">
-                        <img src="images/IMG_4401.jpeg" />
-                     </div>
-
-                     <div class="liked-by">
-                        <span><img src="images/Snowbell.webp" /></span>
-                        <span><img src="images/pussinboots.png" /></span>
-                        <span><img src="images/Garfield_the_Cat.svg" /></span>
-                        <p>Liked by <b>Garfield</b> and <b>173 others</b></p>
-                     </div>
-
-                     <div class="caption">
-                        <p>
-                           <b>Tom</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ullam, quam
-                           voluptatibus natus ex corporis ea atque quisquam, necessitatibus, cumque eligendi aliquam
-                           nulla soluta hic. Obcaecati, tempore dignissimos! Esse cupiditate laborum ullam, quae
-                           necessitatibus, officiis, quaerat aspernatur illo voluptatum repellat perferendis voluptatem
-                           similique. Assumenda nostrum, eius sit laborum nesciunt deserunt!
-                           <span class="harsh-tag">#lifestyle</span>
-                        </p>
-                     </div>
-
-                     <div class="comments text-muted">View all 50 comments</div>
-                  </div>
-               </div>
+              <div class="caption">
+                <p>
+                  <strong>Tom</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ullam, quam
+                  voluptatibus natus ex corporis ea atque quisquam, necessitatibus, cumque eligendi aliquam nulla soluta
+                  hic. Obcaecati, tempore dignissimos! Esse cupiditate laborum ullam, quae necessitatibus, officiis,
+                  quaerat aspernatur illo voluptatum repellat perferendis voluptatem similique. Assumenda nostrum, eius
+                  sit laborum nesciunt deserunt!
+                  <span class="harsh-tag">#lifestyle</span>
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div class="right">
-               <div class="messages">
-                  <div class="heading">
-                     <h4>Messages</h4>
-                     <i class="uil uil-edit"></i>
-                  </div>
-                  <div class="search-bar">
-                     <i class="uil"></i>
-                     <input type="search" placeholder="Search messages" />
-                  </div>
-                  <!------- MESSAGES CATEGORY ------->
-                  <div class="category">
-                     <h6 class="active">Primary</h6>
-                     <h6 class="message-requests">Request</h6>
-                  </div>
-                  <!------- MESSAGES ------->
-                  <div class="message">
-                     <div class="profile-photo">
-                        <img src="https://placehold.co/50x50" />
-                     </div>
-                     <div class="message-body">
-                        <h5>Puss in Boots</h5>
-                        <p class="text-muted">Let's find the golden egg</p>
-                     </div>
-                  </div>
-                  <!------- MESSAGES ------->
-                  <div class="message">
-                     <div class="profile-photo">
-                        <img src="https://placehold.co/50x50" />
-                     </div>
-                     <div class="message-body">
-                        <h5>Tom</h5>
-                        <p class="text-muted">Help me catch jerry</p>
-                     </div>
-                  </div>
-                  <!------- MESSAGES ------->
-                  <div class="message">
-                     <div class="profile-photo">
-                        <img src="https://placehold.co/50x50" />
-                     </div>
-                     <div class="message-body">
-                        <h5>Snowbell</h5>
-                        <p class="text-muted">Good Morning</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="friend-requests">
-                  <h4>Requests</h4>
-                  <div class="request">
-                     <div class="info">
-                        <div class="profile-photo">
-                           <img src="./images/profile-20.jpg" />
-                        </div>
-                        <div>
-                           <h5>Lorem, ipsum.</h5>
-                           <p class="text-muted">8 mutual friends</p>
-                        </div>
-                     </div>
-                     <div class="action">
-                        <button class="btn">Accept</button>
-                        <button class="btn">Decline</button>
-                     </div>
-                  </div>
-                  <div class="request">
-                     <div class="info">
-                        <div class="profile-photo">
-                           <img src="./images/profile-18.jpg" />
-                        </div>
-                        <div>
-                           <h5>Lorem, ipsum.</h5>
-                           <p class="text-muted">2 mutual friends</p>
-                        </div>
-                     </div>
-                     <div class="action">
-                        <button class="btn">Accept</button>
-                        <button class="btn">Decline</button>
-                     </div>
-                  </div>
-               </div>
+        <div class="right">
+          <div class="messages">
+            <div class="heading">
+              <h4>Messages</h4>
+              <i class="uil uil-edit"></i>
             </div>
-         </div>
-      </main>
+            <div class="search-bar">
+              <input type="search" placeholder="Search messages" />
+            </div>
+            <!------- MESSAGES CATEGORY ------->
+            <div class="category">
+              <h6 class="active">Primary</h6>
+              <h6 class="message-requests">Request</h6>
+            </div>
+            <!------- MESSAGES ------->
+            <div class="message">
+              <div class="profile-photo">
+                <img src="images/puss.jpg" />
+              </div>
+              <div class="message-body">
+                <h5>Puss in Boots</h5>
+                <p class="text-muted">Let's find the golden egg</p>
+              </div>
+            </div>
+            <!------- MESSAGES ------->
+            <div class="message">
+              <div class="profile-photo">
+                <img src="images/tom-jerry.png" />
+              </div>
+              <div class="message-body">
+                <h5>Tom</h5>
+                <p class="text-muted">Help me catch jerry</p>
+              </div>
+            </div>
+            <!------- MESSAGES ------->
+            <div class="message">
+              <div class="profile-photo">
+                <img src="images/Snowbell.webp" />
+              </div>
+              <div class="message-body">
+                <h5>Snowbell</h5>
+                <p class="text-muted">Good Morning</p>
+              </div>
+            </div>
+          </div>
 
-      <footer></footer>
+          <div class="friend-requests">
+            <h4>Requests</h4>
+            <div class="request">
+              <div class="info">
+                <div class="profile-photo">
+                  <img src="./images/profile-20.jpg" />
+                </div>
+                <div>
+                  <h5>Lorem, ipsum.</h5>
+                  <p class="text-muted">8 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+            <div class="request">
+              <div class="info">
+                <div class="profile-photo">
+                  <img src="./images/profile-18.jpg" />
+                </div>
+                <div>
+                  <h5>Lorem, ipsum.</h5>
+                  <p class="text-muted">2 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-      <!-- Page-specific code -->
-      <script src="posts.js"></script>
-   </body>
+    <footer></footer>
+
+    <!-- Page-specific code -->
+    <script src="posts.js"></script>
+  </body>
 </html>
