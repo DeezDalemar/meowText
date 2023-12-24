@@ -70,20 +70,6 @@ nav .container {
   justify-content: space-between;
 }
 
-.search-bar {
-  background: white;
-  border-radius: 2rem;
-  padding: 0.6rem 2rem;
-}
-
-.search-bar input[type="search"] {
-  background: transparent;
-  width: 30vw;
-  margin-left: 1rem;
-  font-size: 0.9rem;
-  color: #544785;
-}
-
 nav .create {
   display: flex;
   align-items: center;
@@ -231,14 +217,13 @@ main .container .right {
   margin-bottom: 1rem;
 }
 
-.right .messages .heading h4{
-    margin-left: 5.5rem;
+.right .messages .heading h4 {
+  margin-left: 5.5rem;
 }
 
 .right .messages .search-bar {
   display: flex;
   margin-bottom: 1rem;
-  background: #d9d2f0;
 }
 
 .right .messages .category {
@@ -268,8 +253,10 @@ main .container .right {
 }
 
 .right .friend-requests h4 {
-  color: #9e98b3;
+  color: #544785;
   margin: 1rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .right .request {
