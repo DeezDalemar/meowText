@@ -8,14 +8,13 @@ body{
 }
 
 .regFormOne{
-    /* width: 20rem;
     
-    margin-left: 35%; */
     padding: 25px;
     background-color: whitesmoke;
     border-radius: 15px;
     font-size: 15px;
     max-width: 35%;
+    
 }
 
 h1{
@@ -30,4 +29,8 @@ h1{
 
 .header{
     padding-bottom: 3%;
+}
+
+label{
+ font-size: 2rem;
 }

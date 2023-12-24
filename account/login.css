@@ -1,0 +1,79 @@
+/* body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+   
+}
+
+h1{
+    color: #0f2027;
+    text-align: center;
+    
+}
+
+.loginForm{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin at the top of the form for spacing */
+    /* padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    font-size: 15px;
+    max-width: 85%;
+
+}
+
+.loginButton{
+    margin-top: 10px;
+}  */
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    margin: 0; /* Reset default margin */
+}
+
+h1 {
+    color: #0f2027;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin below h1 for spacing */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    font-size: 2rem;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin at the top of the form for spacing */
+    padding: 25px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    font-size: 15px;
+    max-width: 85%;
+}
+
+#loginButton {
+    margin-top: 10px;
+    
+}
+
+
