@@ -12,7 +12,7 @@
       <!-- Page-specific CSS -->
       <link rel="stylesheet" href="posts.css" />
 
-      <title>/POSTS</title>
+      <title>Meow Text</title>
 
       <!-- Run BEFORE page is finished loading (before window.onload): -->
       <script src="../account/auth.js"></script>
@@ -26,10 +26,12 @@
       <header>
          <nav>
             <div class="container">
+               <a href="../index.html">
                <h2 class="logo">MeowText</h2>
+               </a>
                <h1>Posts</h1>
                <div class="log">
-                  <button class="btn">Sign Out</button>
+                  <button class="btn" onclick="logout()">Sign Out</button>
                   <div class="profile-photo">
                      <img src="#" alt="" />
                   </div>
@@ -169,5 +171,6 @@
 
       <!-- Page-specific code -->
       <script src="posts.js"></script>
+      <script src="auth.js"></script>
    </body>
 </html>
