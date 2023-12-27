@@ -1,0 +1,44 @@
+header {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  
+  text-align: center;
+  font-size: 30px;
+}
+
+#left-column,
+#right-column {
+  flex: 1;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+
+  position: relative;
+  width: 20px;
+  height: 15px;
+  background: transparent;
+  border: 2px solid rgb(233, 237, 240);
+
+  background: linear-gradient(45deg, #081b29, rgb(146, 178, 171));
+  border-bottom: 3px solid rgb(47, 50, 50);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
