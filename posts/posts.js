@@ -112,10 +112,10 @@ async function createCustomCard() {
       feed.appendChild(caption);
       caption.appendChild(likeText);
 
-       if (postContent.innerText.includes("test")) { 
-           feedsContainer.appendChild(feed);
-       }
-           
+    //    if (postContent.innerText.includes("test")) { 
+    //        feedsContainer.appendChild(feed);
+    //    }
+      feedsContainer.appendChild(feed);
        
       
    }
