@@ -1,36 +1,33 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem;
-    /* background-color: #0f2027; */
+    background-color: #b090d0;
 }
 
-.regFormOne{
-    
+.regFormOne {
     padding: 25px;
     background-color: whitesmoke;
     border-radius: 15px;
     font-size: 15px;
     max-width: 35%;
-    
 }
 
-h1{
+h1 {
     color: #0f2027;
     text-align: center;
-    
 }
 
-.submitButton{
+.submitButton {
     margin-top: 10px;
 }
 
-.header{
+.header {
     padding-bottom: 3%;
 }
 
-label{
- font-size: 2rem;
+label {
+    font-size: 2rem;
 }

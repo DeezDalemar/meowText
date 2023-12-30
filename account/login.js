@@ -3,24 +3,26 @@
 "use strict";
 
 const loginForm = document.querySelector("#login");
+const incorrectPhrase = document.querySelector("#incorrectPhrase");
 
-loginForm.onsubmit = function (event) {
-    // Prevent the form from refreshing the page,
-    // as it will do by default when the Submit event is triggered:
-    event.preventDefault();
+loginForm.onsubmit = async function (event) {
+   event.preventDefault();
 
-    // We can use loginForm.username (for example) to access
-    // the input element in the form which has the ID of "username".
-    const loginData = {
-        username: loginForm.username.value,
-        password: loginForm.password.value,
-    }
+   const loginData = {
+      username: loginForm.username.value,
+      password: loginForm.password.value,
+   };
 
-    // Disables the button after the form has been submitted already:
-    loginForm.loginButton.disabled = true;
+   try {
+      await login(loginData);
+      // If login is successful, you can redirect or perform other actions here.
+      console.log("Login successful");
+   } catch (error) {
+      // If login fails, display incorrect phrase and re-enable the login button.
+      incorrectPhrase.style.display = "block";
+      loginForm.loginButton.disabled = false;
+      console.error("Login failed:", error);
+   }
 
-    // Time to actually process the login using the function from auth.js!
-    login(loginData);
-
-    console.log(loginForm.username.value, loginForm.password.value);
+   console.log("Username:", loginForm.username.value, "Password:", loginForm.password.value);
 };
