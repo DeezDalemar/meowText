@@ -1,6 +1,12 @@
 /* Posts Page JavaScript */
 "use strict";
 const feedsContainer = document.querySelector("#feeds");
+const postInput = document.querySelector("#postInput")
+const submitButton = document.querySelector("#postButton")
+
+window.onload = createCustomCard;
+
+submitButton.addEventListener("click",createPost)
 
 function timeAgo(timestamp) {
    const currentDate = new Date();
@@ -121,4 +127,24 @@ async function createCustomCard() {
    }
 }
 
-createCustomCard();
+async function createPost() {
+   let postData = {
+      text: postInput.value
+   }
+
+   console.log(postInput.value);
+   console.log(postData);
+
+   let response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts", {
+      method: "POST",
+      headers: {
+         "Content-Type": "application/json",
+         Authorization: `Bearer ${getLoginData().token}`,
+      },
+      body: JSON.stringify(postData),
+   });
+
+   window.location.reload()
+}
+
+
