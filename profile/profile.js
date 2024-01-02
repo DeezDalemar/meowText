@@ -1,6 +1,24 @@
 /* Posts Page JavaScript */
 "use strict";
 const feedsContainer = document.querySelector("#feeds");
+const userName = document.querySelector(".user-name")
+
+window.onload = displayInfo;
+
+async function displayInfo() {
+   let response = await fetch(
+      `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${getLoginData().username}`,
+      {
+         method: "GET",
+         headers: {
+            Authorization: `Bearer ${getLoginData().token}`,
+         },
+      }
+   );
+   let data = await response.json();
+
+  userName.innerText = data.fullName
+}
 
 function timeAgo(timestamp) {
   const currentDate = new Date();
@@ -29,7 +47,7 @@ function timeAgo(timestamp) {
 }
 
 async function createCustomCard() {
-  let response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts?limit=1000&username=Dale", {
+  let response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts?limit=1000&username=${getLoginData().username}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${getLoginData().token}`,
@@ -40,6 +58,8 @@ async function createCustomCard() {
 
   for (const post of data) {
     console.log(post);
+
+    console.log(post.text);
 
     let feed = document.createElement("div");
     feed.className = "feed";
@@ -103,6 +123,7 @@ async function createCustomCard() {
     photo.appendChild(postContent);
     feed.appendChild(likedBy);
     feed.appendChild(caption);
+    feed.appendChild(photo);
     caption.appendChild(likeText);
 
     //    if (postContent.innerText.includes("test")) {
