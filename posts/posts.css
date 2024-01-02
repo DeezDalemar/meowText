@@ -532,3 +532,23 @@ button.close {
    border: 1px solid #544785;
    font-family: Poppins, sans-serif;
 }
+
+button{
+  color: whitesmoke;
+}
+
+/* styles.css */
+
+.heart-icon-container {
+    bottom: 8px; /* Adjust the bottom padding */
+    right: 8px; /* Adjust the right padding */
+    padding: 4px; /* Adjust padding if needed */
+    margin-right: 1rem;
+
+}
+
+.heart-icon {
+    width: 1rem; /* Adjust the width of the heart icon */
+    height: 1rem; /* Adjust the height of the heart icon */
+   
+}
