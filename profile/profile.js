@@ -29,7 +29,7 @@ function timeAgo(timestamp) {
 }
 
 async function createCustomCard() {
-  let response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts?limit=1000", {
+  let response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts?limit=1000&username=Dale", {
     method: "GET",
     headers: {
       Authorization: `Bearer ${getLoginData().token}`,
@@ -91,6 +91,8 @@ async function createCustomCard() {
       likeText.innerHTML = "Nobody liked that...";
     }
 
+    // profilePhoto.appendChild(profilePFP);
+    // user.appendChild(profilePhoto);
     user.appendChild(info);
     info.appendChild(userName);
     info.appendChild(whenPosted);
