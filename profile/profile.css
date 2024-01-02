@@ -1,0 +1,224 @@
+/************************Header**************************/
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+/* Body Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #544785;
+  background: #e8e7e9;
+  overflow-x: hidden;
+}
+
+/* Profile Photo Styles */
+.profile-photo {
+  display: block;
+  width: 7rem;
+  border-radius: 50%;
+  border: 0.2rem solid black;
+  margin-left: 2rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+  background: #7558db;
+  padding: 0.6rem 2rem;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Text Styles */
+.bold-text {
+  font-weight: 500;
+}
+
+.muted-text {
+  color: #9e98b3;
+}
+
+/* Container Styles */
+.nav-bar {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Navigation Styles */
+nav {
+  width: 100%;
+  background: #b090d0;
+  padding: 0.7rem 0;
+  top: 0;
+  z-index: 10;
+}
+
+nav .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .log-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* =============== Main ============== */
+
+/* Image Styles */
+img {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+/* Table Styles */
+.table {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.table-cell {
+  display: flex;
+  margin: 0 4rem;
+}
+
+/* Profile Header Styles */
+.profile-img {
+  position: relative;
+}
+
+/* Profile Details Styles */
+.profile-details {
+  position: absolute;
+  left: 59px;
+  bottom: 0px;
+  right: 0px;
+  height: 180px;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+/* Profile Banner Styles */
+.profile-banner {
+  height: 360px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.profile-banner img {
+  width: 100%;
+  margin-top: -20%;
+  object-fit: cover;
+}
+
+/* Profile Picture Styles */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 3px;
+  margin-top: 5rem;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px #fff;
+  border-radius: 50%;
+}
+
+/* User Name Styles */
+.user-name {
+  position: absolute;
+  top: 120px;
+  left: 208px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Button Container Styles */
+.button-container {
+  position: absolute;
+  right: 56px;
+  bottom: 20px;
+  width: 211px;
+}
+
+/* Black Gradient Styles */
+.black-gradient {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0) 71%, rgba(0, 0, 0, 0.53));
+  z-index: 1;
+}
+
+/* Content Area Styles */
+.main-content {
+  padding: 55px 0px 0px 55px;
+  margin-top: -5rem;
+  margin-left: -2.5rem;
+}
+
+/* Content Styles */
+.content {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px #ddd;
+  margin-top: 7rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+}
+
+/* Content Label Styles */
+.content-label {
+  position: relative;
+  padding-right: 24px;
+  margin-bottom: 15px;
+}
+
+/* Label Action Styles */
+.label-action {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+
+/* Profile Tabs Styles */
+.profile-tabs {
+  position: relative;
+  font-size: 13px;
+  color: #919191;
+  text-align: center;
+  padding: 13px 20px;
+  margin-top: 25px;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px #ddd;
+  border-radius: 2rem;
+}
+
+.post-input {
+  margin: 2rem;
+  width: 75%;
+  padding: 1rem;
+  border-radius: 2rem;
+}
