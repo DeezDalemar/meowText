@@ -1,179 +1,215 @@
 <!-- POSTS page -->
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
 
-  <!-- Global CSS (CSS rules you want applied to all pages) -->
-  <link rel="stylesheet" href="../global.css" />
+      <!-- Global CSS (CSS rules you want applied to all pages) -->
+      <link rel="stylesheet" href="../global.css" />
 
-  <!-- Page-specific CSS -->
-  <link rel="stylesheet" href="posts.css" />
+      <!-- Page-specific CSS -->
+      <link rel="stylesheet" href="posts.css" />
 
-  <title>Meow Text</title>
+      
 
-  <!-- Run BEFORE page is finished loading (before window.onload): -->
-  <script src="../account/auth.js"></script>
-  <script>
-    if (isLoggedIn() === false) {
-      window.location.replace("../account/login.html");
-    }
-  </script>
-</head>
 
-<body>
-  <header>
-    <nav>
-      <div class="container">
-        <a href="../index.html">
-          <h2 class="logo">MeowText</h2>
-        </a>
-        <h1>Posts</h1>
-        <div class="log">
-          <button class="btn" onclick="logout()">Sign Out</button>
-          <div class="profile-photo">
-            <img src="#" alt="" />
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+      <title>Meow Text</title>
 
-  <main>
-    <div class="container">
-      <div class="left">
-        <a class="profile">
-          <div class="profile-photo">
-            <img src="images/yuji.jpg" alt="" />
-          </div>
-          <div class="handle">
-            <h4>Salin Karki</h4>
-            <p class="text-muted">@blufflemon</p>
-          </div>
-        </a>
+      <!-- Run BEFORE page is finished loading (before window.onload): -->
+      <script src="../account/auth.js"></script>
+      <script>
+         if (isLoggedIn() === false) {
+            window.location.replace("../account/login.html");
+         }
+      </script>
+   </head>
 
-        <div class="sidebar">
-          <a class="menu-item">
-            <h3>Home</h3>
-          </a>
-          <a class="menu-item">
-            <h3>Notification</h3>
-          </a>
-          <a class="menu-item">
-            <h3>Messages</h3>
-          </a>
-          <a class="menu-item">
-            <h3>Setting</h3>
-          </a>
-        </div>
-
-        <button class="btn" for="find-post">Find Post</button>
-      </div>
-
-      <div class="middle">
-        <form action="" class="create-post">
-          <div class="profile-photo">
-            <img src="./images/profile-1.jpg" alt="" />
-          </div>
-          <input type="text" placeholder="What's on your mind?" id="create-post" />
-          <input type="submit" value="Post" class="btn" />
-        </form>
-        <div class="feeds" id="feeds">
-          <!-- feeds go here -->
-        </div>
-      </div>
-
-      <div class="right">
-        <div class="messages">
-          <div class="heading">
-            <h4>Messages</h4>
-            <i class="uil uil-edit"></i>
-          </div>
-          <div class="search-bar">
-            <input type="search" placeholder="Search messages" />
-          </div>
-          <!------- MESSAGES CATEGORY ------->
-          <div class="category">
-            <h6 class="active">Primary</h6>
-            <h6 class="message-requests">Request</h6>
-          </div>
-          <!------- MESSAGES ------->
-          <div class="message">
-            <div class="profile-photo">
-              <img src="images/puss.jpg" />
+   <body>
+      <div class="overlay"></div>
+      <header>
+         <nav>
+            <div class="container">
+               <a href="../index.html">
+                  <h2 class="logo">MeowText</h2>
+               </a>
+               <h1>Posts</h1>
+               <div class="log">
+                  <button class="btn" onclick="logout()">Sign Out</button>
+                  <div class="profile-photo">
+                     <img src="#" alt="" />
+                  </div>
+               </div>
             </div>
-            <div class="message-body">
-              <h5>Puss in Boots</h5>
-              <p class="text-muted">Let's find the golden egg</p>
-            </div>
-          </div>
-          <!------- MESSAGES ------->
-          <div class="message">
-            <div class="profile-photo">
-              <img src="images/tom-jerry.png" />
-            </div>
-            <div class="message-body">
-              <h5>Tom</h5>
-              <p class="text-muted">Help me catch jerry</p>
-            </div>
-          </div>
-          <!------- MESSAGES ------->
-          <div class="message">
-            <div class="profile-photo">
-              <img src="images/Snowbell.webp" />
-            </div>
-            <div class="message-body">
-              <h5>Snowbell</h5>
-              <p class="text-muted">Good Morning</p>
-            </div>
-          </div>
-        </div>
+         </nav>
+      </header>
 
-        <div class="friend-requests">
-          <h4>Requests</h4>
-          <div class="request">
-            <div class="info">
-              <div class="profile-photo">
-                <img src="./images/profile-20.jpg" />
-              </div>
-              <div>
-                <h5>Lorem, ipsum.</h5>
-                <p class="text-muted">8 mutual friends</p>
-              </div>
-            </div>
-            <div class="action">
-              <button class="btn">Accept</button>
-              <button class="btn">Decline</button>
-            </div>
-          </div>
-          <div class="request">
-            <div class="info">
-              <div class="profile-photo">
-                <img src="./images/profile-18.jpg" />
-              </div>
-              <div>
-                <h5>Lorem, ipsum.</h5>
-                <p class="text-muted">2 mutual friends</p>
-              </div>
-            </div>
-            <div class="action">
-              <button class="btn">Accept</button>
-              <button class="btn">Decline</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+      <main>
+         <div class="container">
+            <div class="left">
+               <a class="profile">
+                  <div class="profile-photo">
+                     <img src="images/yuji.jpg" alt="" />
+                  </div>
+                  <div class="handle">
+                     <h4>Salin Karki</h4>
+                     <p class="text-muted">@blufflemon</p>
+                  </div>
+               </a>
 
-  <footer></footer>
+               <div class="sidebar">
+                  <a class="menu-item">
+                     <h3>Home</h3>
+                  </a>
+                  <a class="menu-item">
+                     <h3>Notification</h3>
+                  </a>
+                  <a class="menu-item">
+                     <h3>Messages</h3>
+                  </a>
+                  <a class="menu-item">
+                     <h3>Setting</h3>
+                  </a>
+               </div>
 
-  <!-- Page-specific code -->
-  <script src="posts.js"></script>
-  <script src="auth.js"></script>
-</body>
+               <button type="button" class="btn" for="find-post" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Post</button>
+            </div>
 
+            <div class="middle">
+               <form action="" class="create-post">
+                  <div class="profile-photo">
+                     <img src="./images/profile-1.jpg" alt="" />
+                  </div>
+                  <input type="text" placeholder="What's on your mind?" id="create-post" />
+                  <input type="submit" value="Find Post" class="btn" />
+               </form>
+               <div class="feeds" id="feeds">
+                  <!-- feeds go here -->
+               </div>
+            </div>
+
+            <div class="right">
+               <div class="messages">
+                  <div class="heading">
+                     <h4>Messages</h4>
+                     <i class="uil uil-edit"></i>
+                  </div>
+                  <div class="search-bar">
+                     <input type="search" placeholder="Search messages" />
+                  </div>
+                  <!------- MESSAGES CATEGORY ------->
+                  <div class="category">
+                     <h6 class="active">Primary</h6>
+                     <h6 class="message-requests">Request</h6>
+                  </div>
+                  <!------- MESSAGES ------->
+                  <div class="message">
+                     <div class="profile-photo">
+                        <img src="images/puss.jpg" />
+                     </div>
+                     <div class="message-body">
+                        <h5>Puss in Boots</h5>
+                        <p class="text-muted">Let's find the golden egg</p>
+                     </div>
+                  </div>
+                  <!------- MESSAGES ------->
+                  <div class="message">
+                     <div class="profile-photo">
+                        <img src="images/tom-jerry.png" />
+                     </div>
+                     <div class="message-body">
+                        <h5>Tom</h5>
+                        <p class="text-muted">Help me catch jerry</p>
+                     </div>
+                  </div>
+                  <!------- MESSAGES ------->
+                  <div class="message">
+                     <div class="profile-photo">
+                        <img src="images/Snowbell.webp" />
+                     </div>
+                     <div class="message-body">
+                        <h5>Snowbell</h5>
+                        <p class="text-muted">Good Morning</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="friend-requests">
+                  <h4>Requests</h4>
+                  <div class="request">
+                     <div class="info">
+                        <div class="profile-photo">
+                           <img src="./images/profile-20.jpg" />
+                        </div>
+                        <div>
+                           <h5>Lorem, ipsum.</h5>
+                           <p class="text-muted">8 mutual friends</p>
+                        </div>
+                     </div>
+                     <div class="action">
+                        <button class="btn">Accept</button>
+                        <button class="btn">Decline</button>
+                     </div>
+                  </div>
+                  <div class="request">
+                     <div class="info">
+                        <div class="profile-photo">
+                           <img src="./images/profile-18.jpg" />
+                        </div>
+                        <div>
+                           <h5>Lorem, ipsum.</h5>
+                           <p class="text-muted">2 mutual friends</p>
+                        </div>
+                     </div>
+                     <div class="action">
+                        <button class="btn">Accept</button>
+                        <button class="btn">Decline</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div
+            class="modal fade modal-open"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+         >
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a Post</h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <input type="text" id="post" placeholder="Type Here...">
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary">Post</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+
+      <footer></footer>
+
+      <!-- Page-specific code -->
+      
+      <script src="posts.js"></script>
+      <script src="auth.js"></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+         crossorigin="anonymous"
+      ></script>
+   </body>
 </html>
