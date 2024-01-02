@@ -1,19 +1,42 @@
 /* Posts Page JavaScript */
 "use strict";
 const feedsContainer = document.querySelector("#feeds");
-const postInput = document.querySelector("#postInput")
-const submitButton = document.querySelector("#postButton")
+const postInput = document.querySelector("#postInput");
+const submitButton = document.querySelector("#postButton");
+const usernameDisplay = document.querySelector("#usernameDisplay")
+const fullNameDisplay = document.querySelector("#fullNameDisplay")
 
-window.onload = createCustomCard;
+window.onload = init
 
-submitButton.addEventListener("click",createPost)
+submitButton.addEventListener("click", createPost);
+
+function init() {
+   createCustomCard()
+   displayInfo()
+}
+
+async function displayInfo(){
+   let response = await fetch(
+      `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${getLoginData().username}`,
+      {
+         method: "GET",
+         headers: {
+            Authorization: `Bearer ${getLoginData().token}`,
+         },
+      }
+   );
+   let data = await response.json()
+   
+   usernameDisplay.innerText = data.username
+   fullNameDisplay.innerText = data.fullName
+}
 
 function timeAgo(timestamp) {
    const currentDate = new Date();
    const postDate = new Date(timestamp);
    const seconds = Math.floor((currentDate - postDate) / 1000);
-    //yes i really calculated the seconds
-    //help
+   //yes i really calculated the seconds
+   //help
    if (seconds < 60) {
       return `${seconds} seconds ago`;
    } else if (seconds < 3600) {
@@ -45,8 +68,6 @@ async function createCustomCard() {
    let data = await response.json();
 
    for (const post of data) {
-      console.log(post);
-
       let feed = document.createElement("div");
       feed.className = "feed";
 
@@ -103,6 +124,27 @@ async function createCustomCard() {
          likeText.innerHTML = "Nobody liked that...";
       }
 
+      let heartIconContainer = document.createElement("div");
+      heartIconContainer.className = "heart-icon-container";
+
+      let emptyHeartIcon = document.createElement("img");
+      emptyHeartIcon.src = "../imgs/heart.png"; // Replace with the actual path to your empty heart image
+      emptyHeartIcon.className = "heart-icon";
+      emptyHeartIcon.id = "empty" + post._id;
+      emptyHeartIcon.dataset.postId = post._id;
+      emptyHeartIcon.addEventListener("click", toggleLike);
+
+      let filledHeartIcon = document.createElement("img");
+      filledHeartIcon.src = "../imgs/heart (1).png";
+      filledHeartIcon.className = "heart-icon filled-heart";
+      filledHeartIcon.id = "filled" + post._id;
+      filledHeartIcon.dataset.postId = post._id;
+      filledHeartIcon.style.display = "none";
+      filledHeartIcon.addEventListener("click", toggleLike);
+
+      heartIconContainer.appendChild(emptyHeartIcon);
+      heartIconContainer.appendChild(filledHeartIcon);
+
       profilePhoto.appendChild(profilePFP);
       user.appendChild(profilePhoto);
       user.appendChild(info);
@@ -118,19 +160,56 @@ async function createCustomCard() {
       feed.appendChild(caption);
       caption.appendChild(likeText);
 
-    //    if (postContent.innerText.includes("test")) { 
-    //        feedsContainer.appendChild(feed);
-    //    }
+      feed.appendChild(heartIconContainer);
+
       feedsContainer.appendChild(feed);
-       
-      
+   }
+}
+
+let likeId;
+
+async function toggleLike() {
+   const postId = event.target.dataset.postId;
+   const emptyHeartIcon = document.getElementById("empty" + postId);
+   const filledHeartIcon = document.getElementById("filled" + postId);
+
+   if (emptyHeartIcon.style.display == "") {
+
+      emptyHeartIcon.style.display = "none";
+      filledHeartIcon.style.display = "";
+
+      let response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes", {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getLoginData().token}`,
+         },
+         body: JSON.stringify({
+            postId: postId
+         }),
+      });
+
+      let data = await response.json();
+      likeId = data._id;
+      console.log(likeId);
+   } else if (filledHeartIcon.style.display == "") {
+
+      emptyHeartIcon.style.display = "";
+      filledHeartIcon.style.display = "none";
+      console.log(likeId);
+      let response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes/${likeId}`, {
+         method: "DELETE",
+         headers: {
+            Authorization: `Bearer ${getLoginData().token}`,
+         },
+      });
    }
 }
 
 async function createPost() {
    let postData = {
-      text: postInput.value
-   }
+      text: postInput.value,
+   };
 
    console.log(postInput.value);
    console.log(postData);
@@ -144,7 +223,5 @@ async function createPost() {
       body: JSON.stringify(postData),
    });
 
-   window.location.reload()
+   window.location.reload();
 }
-
-
