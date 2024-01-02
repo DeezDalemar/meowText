@@ -16,6 +16,7 @@ body {
   color: #544785;
   background: #e8e7e9;
   overflow-x: hidden;
+  max-width: auto;
 }
 
 /* Profile Photo Styles */
@@ -95,6 +96,16 @@ img {
   justify-content: space-between;
   width: 100%;
   position: relative;
+  margin-right: 2rem;
+}
+
+.table2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-right: 2rem;
+  max-height: 25rem;
 }
 
 .table-cell {
@@ -194,6 +205,10 @@ img {
   padding-right: 24px;
   margin-bottom: 15px;
 }
+.content-label2 {
+  padding-right: 24px;
+  margin-bottom: 15px;
+}
 
 /* Label Action Styles */
 .label-action {
@@ -214,6 +229,7 @@ img {
   background-color: #fff;
   box-shadow: 0px 3px 3px #ddd;
   border-radius: 2rem;
+  margin-right: 15rem;
 }
 
 .post-input {
@@ -221,4 +237,44 @@ img {
   width: 75%;
   padding: 1rem;
   border-radius: 2rem;
+}
+
+/* =============== Feeds ============== */
+.middle .feeds .feed {
+  background: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.middle .feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle .feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.middle .feed .photo {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.middle .liked-by {
+  display: flex;
+}
+
+.middle .liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e1deed;
+  margin-left: -0.6rem;
 }
