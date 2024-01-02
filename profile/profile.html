@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="profile.css" />
+    <script src="../account/auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) {
+        window.location.replace("../account/login.html");
+      }
+    </script>
   </head>
   <body>
-    <main>
-      <header>
-        <nav>
-          <div class="nav-bar">
-            <h2>MeowText</h2>
-            <h1>Profile</h1>
-            <div class="log-buttons">
-              <button class="btn">Sign</button>
-              <button class="btn">Sign Out</button>
-            </div>
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <h2>MeowText</h2>
+          <h1>Profile</h1>
+          <div class="log-buttons">
+            <button class="btn" onclick="logout()">Sign Out</button>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
+    <main>
       <div class="profile-img">
         <div class="profile-banner">
           <img src="images/IMG_4401.jpeg" alt="banner-image" />
@@ -38,10 +43,14 @@
             <div class="content">
               <div class="content-label">
                 <h3>Info</h3>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor.</p>
               </div>
-              <div>Front-end Engineer</div>
             </div>
           </div>
+
           <div class="table-cell middle-column">
             <div class="margins">
               <div class="profile-tabs">
@@ -63,10 +72,10 @@
               <!-- Search Input -->
               <div class="middle">
                 <form action="" class="post-form">
-                  <input type="text" placeholder="What's on your mind?" class="post-input" />
+                  <input type="text" placeholder="What's on your mind?" class="post-input" id="create-post" />
                   <button class="btn">Post</button>
                 </form>
-                <div class="feeds">
+                <div class="feeds" id="feeds">
                   <!-- feeds go here -->
                 </div>
               </div>
@@ -75,5 +84,7 @@
         </div>
       </div>
     </main>
+    <script src="../account/auth.js"></script>
+    <script src="auth.js"></script>
   </body>
 </html>
