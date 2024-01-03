@@ -131,6 +131,15 @@ main .container .left .profile {
    position: relative;
 }
 
+.menu-item:hover{
+   background-color: #544785;
+   border-radius: 2rem;
+   color: whitesmoke;
+   text-decoration: none;
+}
+
+
+
 .left .sidebar i {
    font-size: 1.4rem;
    color: grey;
@@ -557,4 +566,10 @@ button {
 .postImg {
    width: 20rem;
    margin-left: 17rem;
+}
+
+.notification-img{
+   width: 1rem;
+   margin-left: 0.1rem;
+   margin-bottom: 0.5rem;
 }
