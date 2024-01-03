@@ -7,6 +7,11 @@ const confirmPassword = document.querySelector("#confirmPassword");
 
 const submitButton = document.querySelector("#submitButton");
 
+const usernameTakenText = document.querySelector("#usernameTakenText");
+const spacingBreak = document.querySelectorAll(".spacingBreak");
+const passwordMatchText = document.querySelector("#passwordMatchText");
+const fillOutText = document.querySelector("#fillOutText");
+
 submitButton.addEventListener("click", registerUser);
 
 function registerUser() {
@@ -17,8 +22,11 @@ function registerUser() {
       confirmPassword.value.trim() === ""
    ) {
       console.log("submit all fields before submitting");
+      fillOutText.style.display = "block"
    } else if (passwordInput.value != confirmPassword.value) {
       console.log("passwords didnt match");
+      passwordMatchText.style.display = "block"
+      fillOutText.style.display = "none"
    } else {
       createAccount();
    }
@@ -34,7 +42,16 @@ async function createAccount() {
    });
    let data = await response.json();
    console.log(data);
-   window.location.assign("http://127.0.0.1:5502/account/login.html");
+   if (response.status == 201) {
+      window.location.assign("http://127.0.0.1:5502/account/login.html");
+   } else if (response.status == 409) {
+      usernameTakenText.style.display = "block";
+      fillOutText.style.display = "none";
+      passwordMatchText.style.display = "none";
+      spacingBreak.forEach(function (br) {
+         br.style.display = "none";
+      });
+   }
 }
 
 function getSignInData() {

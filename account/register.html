@@ -31,13 +31,17 @@
           <br />
           <label for="usernameInput">Username:</label> <br />
           <input type="text" placeholder="Create username" id="usernameInput" />
-          <br /><br>
+          <p class="text-danger" id="usernameTakenText" style="display: none;">Username has already been taken</p>
+          <br class="spacingBreak">
+          <br class="spacingBreak">
           <label for="passwordInput">Create Password:</label> <br />
           <input type="password" placeholder="Enter password" id="passwordInput" />
           <br />
           <label for="confirm-password">Confirm Password:</label> <br />
           <input type="password" placeholder="Re-enter password" id="confirmPassword" />
           <br /><br />
+          <p class="text-danger" id="passwordMatchText" style="display: none;">Passwords didnt match</p>
+          <p class="text-danger" id="fillOutText" style="display: none;">Fill out all forms on the page</p>
           <button type="button" id="submitButton">Create account</button>
           <br /><br />
           <a href="login.html">Have an account?</a>
