@@ -14,12 +14,12 @@ body {
    color: #544785;
    background: #e8e7e9;
    overflow-x: hidden;
-   margin-right: 5rem !important;
+   
 }
 
 .container {
    width: 80%;
-   margin: 0 auto;
+   margin: 0 8rem;
 }
 
 .profile-photo {
@@ -185,8 +185,6 @@ main .container .left .profile {
 }
 
 .middle .feed .photo {
-   border-radius: 1rem;
-   overflow: hidden;
    margin: 0.7rem 0;
 }
 
