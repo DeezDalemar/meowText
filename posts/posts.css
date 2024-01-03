@@ -208,8 +208,7 @@ main .container .left .profile {
 main .container .right {
    height: max-content;
    position: sticky;
-   top: -18rem;
-   bottom: 0;
+   top: 5.4rem;
 }
 
 /* =============== Messages ============== */
@@ -217,6 +216,7 @@ main .container .right {
    background: rgb(255, 255, 255);
    border-radius: 1rem;
    padding: 2px;
+   position: sticky;
 }
 
 .right .messages .heading {
@@ -286,9 +286,6 @@ main .container .right {
    gap: 1rem;
 }
 
-.right {
-   margin-right: 6rem;
-}
 
 article,
 aside,
