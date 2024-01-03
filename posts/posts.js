@@ -3,19 +3,19 @@
 const feedsContainer = document.querySelector("#feeds");
 const postInput = document.querySelector("#postInput");
 const submitButton = document.querySelector("#postButton");
-const usernameDisplay = document.querySelector("#usernameDisplay")
-const fullNameDisplay = document.querySelector("#fullNameDisplay")
+const usernameDisplay = document.querySelector("#usernameDisplay");
+const fullNameDisplay = document.querySelector("#fullNameDisplay");
 
-window.onload = init
+window.onload = init;
 
 submitButton.addEventListener("click", createPost);
 
 function init() {
-   createCustomCard()
-   displayInfo()
+   createCustomCard();
+   displayInfo();
 }
 
-async function displayInfo(){
+async function displayInfo() {
    let response = await fetch(
       `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${getLoginData().username}`,
       {
@@ -25,10 +25,10 @@ async function displayInfo(){
          },
       }
    );
-   let data = await response.json()
-   
-   usernameDisplay.innerText = data.username
-   fullNameDisplay.innerText = data.fullName
+   let data = await response.json();
+
+   usernameDisplay.innerText = data.username;
+   fullNameDisplay.innerText = data.fullName;
 }
 
 function timeAgo(timestamp) {
@@ -102,7 +102,25 @@ async function createCustomCard() {
       photo.className = "photo";
 
       let postContent = document.createElement("p");
-      postContent.innerText = post.text;
+
+      // Check for image URLs in post text
+      const imageUrlRegex = /:\s*(.+)/;
+      const match = post.text.match(imageUrlRegex);
+
+      if (match) {
+         // If an image URL is found, create an image element
+         const imageUrl = match[1];
+         const imageElement = document.createElement("img");
+         imageElement.className = "postImg"
+         imageElement.src = imageUrl;
+         photo.appendChild(imageElement);
+
+         // Display the text without the image URL
+         postContent.innerText = post.text.replace(imageUrlRegex, "");
+      } else {
+         // If no image URL is found, use the original post text
+         postContent.innerText = post.text;
+      }
 
       let likedBy = document.createElement("div");
       likedBy.className = "liked-by";
@@ -128,7 +146,7 @@ async function createCustomCard() {
       heartIconContainer.className = "heart-icon-container";
 
       let emptyHeartIcon = document.createElement("img");
-      emptyHeartIcon.src = "../imgs/heart.png"; // Replace with the actual path to your empty heart image
+      emptyHeartIcon.src = "../imgs/heart.png";
       emptyHeartIcon.className = "heart-icon";
       emptyHeartIcon.id = "empty" + post._id;
       emptyHeartIcon.dataset.postId = post._id;
@@ -174,7 +192,6 @@ async function toggleLike() {
    const filledHeartIcon = document.getElementById("filled" + postId);
 
    if (emptyHeartIcon.style.display == "") {
-
       emptyHeartIcon.style.display = "none";
       filledHeartIcon.style.display = "";
 
@@ -185,7 +202,7 @@ async function toggleLike() {
             Authorization: `Bearer ${getLoginData().token}`,
          },
          body: JSON.stringify({
-            postId: postId
+            postId: postId,
          }),
       });
 
@@ -193,7 +210,6 @@ async function toggleLike() {
       likeId = data._id;
       console.log(likeId);
    } else if (filledHeartIcon.style.display == "") {
-
       emptyHeartIcon.style.display = "";
       filledHeartIcon.style.display = "none";
       console.log(likeId);
