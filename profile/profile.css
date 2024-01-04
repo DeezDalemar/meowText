@@ -19,6 +19,10 @@ body {
   max-width: auto;
 }
 
+h2{
+  color: #362e55;
+}
+
 /* Profile Photo Styles */
 .profile-photo {
   display: block;
