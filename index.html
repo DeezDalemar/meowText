@@ -2,33 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="global.css" />
-
-    <!-- Page-specific CSS -->
+    <title>Document</title>
     <link rel="stylesheet" href="index.css" />
-
-    <title>Login to the Microblog Network!</title>
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35rem;
+        
+      }
+      </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <span id="greetingSpan">Welcome </span>
-        <a id="loginLink" href="account/login.html">Login</a>
-        <a id="logoutLink" onclick="logout()" href="">Log Out</a>
-      </nav>
-    </header>
+    <header>MeowText</header>
 
-    <main>
-      <h1>Welcome to YOUR MICROBLOG NETWORK yes</h1>
-    </main>
+    <img  src="images/image-removebg-preview_2.webp" alt="">
 
-    <footer></footer>
+    <div class="form-popup">
+      <div class="form-box">
+        <div class="form-details">
+          <h1>Welcome Back</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, iure. Optio ipsam sit aperiam corporis hic
+            dolorem numquam
+          </p>
+        </div>
+        <div class="form-content" id="left-column">
+          <a href="account/login.html">Login</a>
+        </div>
+        <div id="right-column">
+          <a href="account/register.html">Register</a>
+        </div>
+      </div>
+    </div>
 
-    <script src="account/auth.js"></script>
-    <script src="index.js"></script>
+    <footer>&copy; 2023 MeowText Media. All rights reserved.</footer>
   </body>
 </html>

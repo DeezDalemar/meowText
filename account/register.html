@@ -44,10 +44,12 @@
           
           <div class="inputBoxTwo">
           <input type="text" placeholder="Create username" id="usernameInput" />
+          <p class="text-danger" id="usernameTakenText" style="display: none;">Username has already been taken</p>
           
           <i class="gg-user"></i>
         </div>
-          <br /><br />
+          <br class="spacingBreak">
+          <br class="spacingBreak" />
           <label for="passwordInput">Create Password</label>
           <br />
           <div class="inputBoxThree">
@@ -62,6 +64,8 @@
           <i class="gg-lock"></i>
         </div>
           <br />
+          <p class="text-danger" id="passwordMatchText" style="display: none;">Passwords didnt match</p>
+          <p class="text-danger" id="fillOutText" style="display: none;">Fill out all forms on the page</p>
           <button type="button" id="submitButton" class="rounded">Create account</button>
           <br />
           <a href="login.html" id="registerPageLoginAnchor">Have an account?</a>
