@@ -11,7 +11,7 @@ window.onload = init;
 submitButton.addEventListener("click", createPost);
 
 function init() {
-   createCustomCard();
+   createYourMessages();
    displayInfo();
 }
 
@@ -57,7 +57,7 @@ function timeAgo(timestamp) {
    }
 }
 
-async function createCustomCard() {
+async function createYourMessages() {
    let response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts?limit=1000", {
       method: "GET",
       headers: {
@@ -104,21 +104,22 @@ async function createCustomCard() {
       let postContent = document.createElement("p");
 
       // Check for image URLs in post text
-      const imageUrlRegex = /:\s*(.+)/;
-      const match = post.text.match(imageUrlRegex);
+      const imageUrlRegex = /https:\/\/[^\s]+/g;
+      const matches = post.text.match(imageUrlRegex);
 
-      if (match) {
-         // If an image URL is found, create an image element
-         const imageUrl = match[1];
-         const imageElement = document.createElement("img");
-         imageElement.className = "postImg"
-         imageElement.src = imageUrl;
-         photo.appendChild(imageElement);
+      if (matches) {
+         // If image URLs are found, create image elements
+         matches.forEach((imageUrl) => {
+            const imageElement = document.createElement("img");
+            imageElement.className = "postImg";
+            imageElement.src = imageUrl;
+            photo.appendChild(imageElement);
+         });
 
-         // Display the text without the image URL
+         // Display the text without the image URLs
          postContent.innerText = post.text.replace(imageUrlRegex, "");
       } else {
-         // If no image URL is found, use the original post text
+         // If no image URLs are found, use the original post text
          postContent.innerText = post.text;
       }
 

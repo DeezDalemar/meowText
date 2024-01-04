@@ -1,91 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="profile.css" />
-    <script src="../account/auth.js"></script>
-    <script>
-      if (isLoggedIn() === false) {
-        window.location.replace("../account/login.html");
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="nav-bar">
-          <a href="../posts/posts.html">
-          <h2>MeowText</h2>
-          </a>
-          <h1>Profile</h1>
-          <div class="log-buttons">
-            <button class="btn" onclick="logout()">Sign Out</button>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="profile-img">
-        <div class="profile-banner">
-          <img src="images/IMG_4401.jpeg" alt="banner-image" />
-        </div>
-        <div class="profile-details">
-          <div class="profile-pic">
-            <img src="../imgs/eye.png" />
-          </div>
-          <div class="user-name">Salin Karki</div>
-        </div>
-        <div class="black-gradient"></div>
-      </div>
-      <div class="main-content">
-        <div class="table2">
-          <div class="table-cell">
-            <div class="content">
-              <div class="content-label">
-                <h3>Info</h3>
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-                <p>Lorem, ipsum dolor.</p>
-              </div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="profile.css" />
+      <script src="../account/auth.js"></script>
+      <script>
+         if (isLoggedIn() === false) {
+            window.location.replace("../account/login.html");
+         }
+      </script>
+   </head>
+
+   <body>
+      <header>
+         <nav>
+            <div class="nav-bar">
+               <!-- Add a class 'posts-link' to the "Posts" link -->
+               <a href="../posts/posts.html" class="posts-link">
+                  <h2>MeowText</h2>
+               </a>
+               <h1>Profile</h1>
+               <div class="log-buttons">
+                  <button class="btn" onclick="logout()">Sign Out</button>
+               </div>
             </div>
-          </div>
-          <div class="table-cell middle-column">
+         </nav>
+      </header>
+      <main>
+         <div class="profile-img">
+            <div class="profile-banner">
+               <img src="" alt="banner-image" />
+            </div>
+            <div class="profile-details">
+               <div class="profile-pic">
+                  <img src="../imgs/eye.png" />
+               </div>
+               <div class="user-name">Salin Karki</div>
+            </div>
+            <div class="black-gradient"></div>
+         </div>
+         <div class="main-content">
             <div class="margins">
-              <div class="profile-tabs">
-                <div class="table">
-                  <div class="table-cell">
-                    <p>Followers</p>
+               <div class="profile-tabs">
+                  <div class="table">
+                     <div class="table-cell">
+                        <button onclick="showContent('Notifications')">Notifications</button>
+                     </div>
+                     <div class="table-cell">
+                        <button onclick="showContent('Post')">Post</button>
+                     </div>
+                     <div class="table-cell">
+                        <button onclick="showContent('Likes')">Likes</button>
+                     </div>
                   </div>
-                  <div class="table-cell">
-                    <p>Following</p>
+               </div>
+               <br />
+               <div class="container-info">
+                  <div class="about-us">
+                     <h2>About Us</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                        cursus ante dapibus diam.
+                     </p>
                   </div>
-                  <div class="table-cell">
-                    <p>Post</p>
+                  <div class="feed-container">
+                     <div class="feeds" id="feeds" style="background-color: whitesmoke">
+                       
+                     </div>
                   </div>
-                  <div class="table-cell">
-                    <p>Likes</p>
-                  </div>
-                </div>
-              </div>
-              <!-- Search Input -->
-              <div class="middle">
-                <form class="post-form">
-                  <input type="text" placeholder="What's on your mind?" class="post-input" id="create-post" />
-                  <button class="btn">Post</button>
-                </form>
-                <div class="feeds" id="feeds">
-                  <!-- feeds go here -->
-                </div>
-              </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script src="profile.js"></script>
-    <script src="../account/auth.js"></script>
-  </body>
+         </div>
+      </main>
+      <script src="profile.js"></script>
+      <script src="../account/auth.js"></script>
+   </body>
 </html>
