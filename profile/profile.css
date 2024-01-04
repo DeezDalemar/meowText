@@ -284,12 +284,7 @@ img {
 }
 
 /* Add this CSS to handle nav link hover effect and post visibility */
-.nav-bar a:hover {
-   background-color: #544785;
-   border-radius: 2rem;
-   color: whitesmoke;
-   text-decoration: none;
-}
+
 
 .about-us {
    background-color: whitesmoke;

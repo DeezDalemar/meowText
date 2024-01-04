@@ -56,14 +56,27 @@ const randomMessages = [
    "Cheers to another notification!",
    "Random message from @username!",
    "Your cooked buddy",
-   "I know were you live",
+   "I know where you live",
+   "Cheese, why cause I can",
+   "hows your dad?",
+   "wanna play chess?",
+   "thats your fault",
+   "WHAT EVEN IS A KILLOMETER!?!?!",
+   "i love indie rpgs!!!",
+   "Hey, its me, your neighbor. TURN DOWN YOUR MUSIC, gosh. Thanks in advance -Steve.",
+   "hey is this your kid in my yard?",
+   "have you done your spanish lessons -duolingo",
+  "125.178.149.108",
+  "We've noticed that you recently have been shopping for ''fursuits'' we'll now reccomend these to you.",
+  
+   
 ];
 
 function generateRandomNotifications() {
    const notifications = [];
    const currentUsername = getLoginData().username;
 
-   for (let i = 0; i < 7; i++) {
+   for (let i = 0; i < 10; i++) {
       const randomMessage = randomMessages[Math.floor(Math.random() * randomMessages.length)];
       const notification = {
          username: `username${i}`,
