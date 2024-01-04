@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!-- Global CSS (CSS rules you want applied to all pages) -->
-      <link rel="stylesheet" href="./global.css" />
+    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <link rel="stylesheet" href="./global.css" />
 
-      <!-- Page-specific CSS -->
+    <!-- Page-specific CSS -->
 
-      <link
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-         rel="stylesheet"
-         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-         crossorigin="anonymous"
-      />
-      <link rel="stylesheet" href="./login.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./login.css" />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/lock.css' rel='stylesheet'>
 
-      <title>Login</title>
+    <title>Login</title>
 
-      <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
-      <script src="auth.js"></script>
-      <script>
-         if (isLoggedIn() === true) {
-            window.location.replace("../posts/posts.html");
-         }
-      </script>
-   </head>
-   <body>
-      <header></header>
+    <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
+    <script src="auth.js"></script>
+    <script>
+      if (isLoggedIn() === true) {
+        window.location.replace("../posts/posts.html");
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <section class="loginForm">
+        <div class="welcomeTitle">
+          <h3 class="text-center">Welcome to</h3>
+          <h3 class="text-center">MeowText</h3>
+        </div>
+        <form class="text-center" id="login">
+          <label for="username">Username</label><br />
+          <div class="inputBoxOne">
+            <input type="text" placeholder="Enter username" id="username" minlength="3" />
+            <i class="gg-user"></i>
+          </div>
+          <label for="password">Password</label><br />
+          <div class="inputBoxTwo">
+            <input type="password" placeholder="Enter password" id="password" minlength="3" style="width: 100%" />
+            <i class="gg-lock"></i>
+          </div>
+          
+          <p class="text-danger" id="incorrectPhrase" style="display: none">Incorrect Username or Password</p>
 
-      <main>
-         <section class="loginForm">
-            <div>
-               <h3 class="text-center">Welcome to</h3>
-               <h3 class="text-center pb-4 fw-bold">MeowText</h3>
-            </div>
-            <form class="text-center" id="login">
-               <div>
-                  <label for="username">Username:</label><br />
-                  <input type="text" id="username" minlength="3" />
-               </div>
+          <button id="loginButton" type="submit" class="rounded">Log in</button>
+          <br />
+          <a href="register.html" id="loginPageRegisterAnchor">Dont have a account?</a>
+        </form>
+      </section>
+    </main>
 
-               <div>
-                  <label for="password">Password:</label><br />
-                  <input type="password" id="password" minlength="3" />
-               </div>
-               <p class="text-danger" id="incorrectPhrase" style="display: none;">Incorrect Username or Password</p>
-
-               <button id="loginButton" type="submit" class="rounded">Login</button>
-               <br /><br />
-               <a href="register.html">Dont have a account?</a>
-            </form>
-         </section>
-      </main>
-
-      <footer></footer>
-      <!-- Page-specific code -->
-      <script src="login.js"></script>
-   </body>
+    <footer></footer>
+    <!-- Page-specific code -->
+    <script src="login.js"></script>
+  </body>
 </html>

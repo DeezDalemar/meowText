@@ -35,3 +35,7 @@ body{
 .btn:hover {
    opacity: 0.8;
 }
+
+body{
+    font-family: "Poppins", sans-serif;
+}

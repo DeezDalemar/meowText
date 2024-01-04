@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="global.css" />
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="index.css" />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/girl.css' rel='stylesheet'>
     <title>Login to the Microblog Network!</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -15,38 +16,60 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/designmodo.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/lock-unlock.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/lock.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/profile.css' rel='stylesheet'>
     <link rel="stylesheet" href="register.css" />
   </head>
   <body>
-    <section class="header">
-    </section>
+   
 
     <section class="regFormOne">
       <form class="text-center" id="registerForm">
-        <h1 class="pb-3">Create an Account</h1>
-
+        <div class="registrationFormHeader">
+          <h1 class="pb-3">Create an Account</h1>
+        </div>
         <div class="regFormContent">
-          <label for="emailInput">Fullname:</label><br />
-          <input type="email" placeholder="Enter full name" id="emailInput" />
           <br />
-          <label for="usernameInput">Username:</label> <br />
+          <label for="emailInput">Full name</label>
+          <div class="inputBoxOne">
+          <input type="email" placeholder="Enter full name" id="emailInput" />
+          <i class="gg-profile"></i>
+          
+     
+        </div>
+          <label for="usernameInput">Username</label>
+          
+          <div class="inputBoxTwo">
           <input type="text" placeholder="Create username" id="usernameInput" />
           <p class="text-danger" id="usernameTakenText" style="display: none;">Username has already been taken</p>
+          
+          <i class="gg-user"></i>
+        </div>
           <br class="spacingBreak">
-          <br class="spacingBreak">
-          <label for="passwordInput">Create Password:</label> <br />
-          <input type="password" placeholder="Enter password" id="passwordInput" />
+          <br class="spacingBreak" />
+          <label for="passwordInput">Create Password</label>
           <br />
-          <label for="confirm-password">Confirm Password:</label> <br />
+          <div class="inputBoxThree">
+          <input type="password" placeholder="Create password" id="passwordInput" />
+          <i class="gg-lock-unlock"></i>
+        </div>
+          
+          <label for="confirm-password">Confirm Password</label>
+          
+          <div class="inputBoxFour">
           <input type="password" placeholder="Re-enter password" id="confirmPassword" />
-          <br /><br />
+          <i class="gg-lock"></i>
+        </div>
+          <br />
           <p class="text-danger" id="passwordMatchText" style="display: none;">Passwords didnt match</p>
           <p class="text-danger" id="fillOutText" style="display: none;">Fill out all forms on the page</p>
-          <button type="button" id="submitButton">Create account</button>
-          <br /><br />
-          <a href="login.html">Have an account?</a>
+          <button type="button" id="submitButton" class="rounded">Create account</button>
+          <br />
+          <a href="login.html" id="registerPageLoginAnchor">Have an account?</a>
         </div>
-
       </form>
     </section>
 
