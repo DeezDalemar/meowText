@@ -1,52 +1,139 @@
 
 body {
+    color: #544785;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
-    margin: 0; /* Reset default margin */
+    padding: 10rem;
     background-color: #b090d0;
+    margin: 0; /* Reset default margin */
 }
 
-h1 {
-    color: #0f2027;
-    text-align: center;
-    margin-bottom: 20px; /* Add margin below h1 for spacing */
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h3{
+    font-size: xxx-large;
 }
 
 label{
+    font-size: 2.5rem;
+}
+
+input {
+    box-sizing: border-box;
+    border: solid black 3px;
+    border-radius: 10px;
     font-size: 2rem;
+    width: 85%;
 }
 
 .loginForm {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content at the top of the form */
+    justify-content: flex-start;
     align-items: center;
-    align-self: center; /* Center the form horizontally */
+    align-self: center;
     margin-top: 20px;
     padding: 25px;
     background-color: whitesmoke;
     border-radius: 15px;
     font-size: 15px;
-    max-width: 85%;
-    width: 25rem;
-    height: 30rem;
+    max-width: 100%;
+    width: 40rem;
+    height: 100%;
+    margin: 0 auto;
 }
 
-#loginButton {
-    margin-top: 10px;
-    
+#loginButton{
+    margin-top: 20px;
+    display: inline-block;
+   padding: 0.6rem 2rem;
+   border: 2px solid black;
+   font-weight: 500;
+   border-radius: 2rem;
+   cursor: pointer;
+   transition: all 300ms ease;
+   font-size: 1rem;
+    background-color: #e5e3ec;
 }
 
-.loginButton{
-    background-color: #544785;
+#loginPageRegisterAnchor{
+    font-size: x-large;
+     margin: 50px;
 }
+
+.welcomeTitle{
+    font-size: 2.5rem;
+    padding-bottom: .5rem;
+}
+
+
+.inputBoxOne {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin to adjust spacing */
+}
+
+.inputBoxOne i {
+    position: absolute;
+    left: 20px; /* Adjust the left position as needed */
+    color: #555; /* Adjust the color as needed */
+    font-size: 2rem; /* Adjust the font size as needed */
+}
+
+.inputBoxOne input {
+    box-sizing: border-box;
+    border: solid black 3px;
+    border-radius: 10px;
+    font-size: 2rem;
+    width: 100% ;
+    padding-left: 50px; /* Adjust the padding to leave space for the icon */
+}
+
+.inputBoxOne ::placeholder{
+    text-align: center;
+    font-size: larger;
+    padding-right: 5rem;
+}
+
+
+.inputBoxTwo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.inputBoxTwo i {
+    position: absolute;
+    left: 20px; /* Adjust the left position as needed */
+    color: #555; /* Adjust the color as needed */
+    font-size: 500rem; /* Adjust the font size as needed */
+}
+
+.inputBoxTwo input {
+    box-sizing: border-box;
+    border: solid black 3px;
+    border-radius: 10px;
+    font-size: 2rem;
+    width: 100%;
+    padding-left: 50px; /* Adjust the padding to leave space for the icon */
+}
+
+.inputBoxTwo ::placeholder{
+    text-align: center;
+    font-size: larger;
+    padding-right: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 
