@@ -1,0 +1,130 @@
+<<<<<<< HEAD
+=======
+body {
+  background-color: #b090d0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  padding: 20px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 35rem;
+  margin-top: 20px;
+}
+
+.form-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 80%;
+}
+
+.form-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-details {
+  text-align: center;
+  color: rgb(36, 32, 32);
+  margin-bottom: 20px;
+}
+
+.form-box h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.form-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#left-column,
+#right-column {
+  width: 48%;
+  box-sizing: border-box;
+}
+
+#left-column a,
+#right-column a {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: #7558db;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#left-column a:hover,
+#right-column a:hover {
+  background-color: #544785;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+body {
+  background-color: #b090d0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+img {
+  width: 35rem;
+  margin-top: 20px;
+}
+
+.logoText {
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the text is above the form */
+}
+
+.form-popup {
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 80%;
+  margin-top: 13rem;
+  border-radius: 1rem;
+}
+
+/* Rest of your CSS remains unchanged */
+>>>>>>> 0d6a0484653c15d61ff260b86b7c5410d303cf70
