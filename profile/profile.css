@@ -19,7 +19,7 @@ body {
   max-width: auto;
 }
 
-h2{
+h2 {
   color: #362e55;
 }
 
@@ -40,7 +40,7 @@ h2{
   cursor: pointer;
   transition: all 300ms ease;
   font-size: 0.9rem;
-  background: #7558db;
+  background: #544785;
   padding: 0.6rem 2rem;
   color: white;
 }
@@ -135,7 +135,7 @@ img {
 
 /* Profile Banner Styles */
 .profile-banner {
-  height: 360px;
+  height: max-content;
   overflow: hidden;
   z-index: 1;
 }
@@ -155,6 +155,7 @@ img {
   overflow: hidden;
   box-shadow: 0 0 0 5px #fff;
   border-radius: 50%;
+  background-color: #544785;
 }
 
 /* User Name Styles */
@@ -224,7 +225,6 @@ img {
 
 /* Profile Tabs Styles */
 .profile-tabs {
-  
   position: relative;
   font-size: 13px;
   color: #919191;
@@ -234,7 +234,6 @@ img {
   background-color: #fff;
   box-shadow: 0px 3px 3px #ddd;
   border-radius: 2rem;
-  
   margin-top: 7.5rem;
   margin-right: 15rem;
   margin-left: 41rem;
@@ -248,6 +247,7 @@ img {
 }
 
 /* =============== Feeds ============== */
+
 .middle .feeds .feed {
   background: white;
   border-radius: 2rem;
@@ -289,82 +289,140 @@ img {
 
 /* Add this CSS to handle nav link hover effect and post visibility */
 
-
 .about-us {
-   background-color: whitesmoke;
-   border-radius: 15px;
-   padding: 20px;
-   margin-bottom: 20px;
-   width: 30rem;
-   max-height: 10rem;
-   
+  background-color: whitesmoke;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 30rem;
+  max-height: 10rem;
 }
 
 .feed-container {
-   width: 70%; /* Adjust as needed */
-  
- 
-   background-color: whitesmoke;
-   padding: 20px;
-   border-radius: 10px;
-   max-height: 30rem;
-   overflow-y: scroll;
-   
+  width: 70%;
+  /* Adjust as needed */
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 30rem;
+  overflow-y: scroll;
 }
 
-#profile-content{
- display: flex;
- flex-direction: row;
- gap: 2rem;
+#profile-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
-.container-info{
+.container-info {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 15rem;
 }
 
 .feeds .feed {
-   background: white;
-   border-radius: 2rem;
-   padding: 1rem;
-   margin: 1rem 0;
-   font-size: 0.85rem;
-   line-height: 1.5;
-   max-width: 55rem;
-   overflow-wrap: break-word;
+  background: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 55rem;
+  overflow-wrap: break-word;
 }
 
 .feed .head {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .feed .user {
-   display: flex;
-   gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .feed .photo {
-   margin: 0.7rem 0;
-   
+  margin: 0.7rem 0;
 }
 
 .liked-by {
-   display: flex;
+  display: flex;
 }
 
 .liked-by span {
-   width: 1.4rem;
-   height: 1.4rem;
-   display: block;
-   border-radius: 50%;
-   overflow: hidden;
-   border: 2px solid #e1deed;
-   margin-left: -0.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e1deed;
+  margin-left: -0.6rem;
 }
 
-.user-name{
+.user-name {
   margin-top: -2rem;
   color: #362e55;
+}
+
+.feeds .feed {
+  background: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 55rem;
+}
+
+.feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.feed .photo {
+  margin: 0.7rem 0;
+}
+
+.liked-by {
+  display: flex;
+}
+
+.liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e1deed;
+  margin-left: -0.6rem;
+}
+
+.heart-icon-container {
+  bottom: 8px;
+  right: 8px;
+  padding: 4px;
+  margin-right: 1rem;
+}
+
+.heart-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.postImg {
+  width: 20rem;
+  margin-left: 17rem;
+}
+
+.profile-photo {
+  margin-left: 1rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #544785;
 }

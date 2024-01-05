@@ -1,6 +1,5 @@
-
+/* Global Styles */
 body {
-    color: #544785;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,18 +10,21 @@ body {
     margin: 0;
 }
 
+/* Header Styles */
 h1 {
     color: #423866;
     text-align: center;
+    padding-bottom: 3%;
 }
 
+/* Main Container Styles */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
+/* Registration Form Styles */
 .regFormOne {
     padding: 25px;
     background-color: whitesmoke;
@@ -31,21 +33,14 @@ main {
     max-width: 35%;
 }
 
-h1 {
-    color: #423866;
-    text-align: center;
-}
-
+/* Submit Button Styles */
 .submitButton {
     margin-top: 10px;
-    max-width: 100%; /* Set a maximum width */
+    max-width: 100%;
     width: 40rem;
-    height: 100%; /* Take up the full width of the parent container */
+    height: 100%;
     margin: 0 auto;
-    /* Center the form horizontally */
-    
 }
-
 
 #submitButton {
     margin-top: 20px;
@@ -56,149 +51,68 @@ h1 {
     cursor: pointer;
     transition: all 300ms ease;
     font-size: 1rem;
-     background-color: #e5e3ec;
-    
-    
+    background-color: #e5e3ec;
 }
 
-#registerPageLoginAnchor{
+#registerPageLoginAnchor {
     font-size: x-large;
     margin-top: 20px;
 }
 
-.header {
-    padding-bottom: 3%;
-}
-
+/* Input Styles */
 label {
     font-size: 2.5rem;
 }
 
-input{
+input {
     box-sizing: border-box;
     border: solid black 3px;
     border-radius: 10px;
     font-size: 2rem;
-    width: 85%; /* Take up the full width of the parent container */
+    width: 85%;
 }
 
 input::placeholder {
     text-align: center;
 }
 
-
-
-.inputBoxOne {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin to adjust spacing */
-}
-
-.inputBoxOne i {
-    position: absolute;
-    left: 20px; /* Adjust the left position as needed */
-    color: #555; /* Adjust the color as needed */
-    font-size: 2rem; /* Adjust the font size as needed */
-}
-
-.inputBoxOne input {
-    box-sizing: border-box;
-    border: solid black 3px;
-    border-radius: 10px;
-    font-size: 2rem;
-    width: 100% ;
-    padding-left: 50px; /* Adjust the padding to leave space for the icon */
-}
-
-.inputBoxOne ::placeholder{
-    text-align: center;
-    font-size: larger;
-    padding-right: 5rem;
-}
-
-.inputBoxTwo {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin to adjust spacing */
-}
-
-.inputBoxTwo i {
-    position: absolute;
-    left: 20px; /* Adjust the left position as needed */
-    color: #555; /* Adjust the color as needed */
-    font-size: 2rem; /* Adjust the font size as needed */
-}
-
-.inputBoxTwo input {
-    box-sizing: border-box;
-    border: solid black 3px;
-    border-radius: 10px;
-    font-size: 2rem;
-    width: 100% ;
-    padding-left: 50px; /* Adjust the padding to leave space for the icon */
-}
-
-.inputBoxTwo ::placeholder{
-    text-align: center;
-    font-size: larger;
-    padding-right: 5rem;
-}
-
-.inputBoxThree {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin to adjust spacing */
-}
-
-.inputBoxThree i {
-    position: absolute;
-    left: 20px; /* Adjust the left position as needed */
-    color: #555; /* Adjust the color as needed */
-    font-size: 2rem; /* Adjust the font size as needed */
-}
-
-.inputBoxThree input {
-    box-sizing: border-box;
-    border: solid black 3px;
-    border-radius: 10px;
-    font-size: 2rem;
-    width: 100% ;
-    padding-left: 50px; /* Adjust the padding to leave space for the icon */
-}
-
-.inputBoxThree ::placeholder{
-    text-align: center;
-    font-size: larger;
-    padding-right: 5rem;
-}
-
+/* Input Box Styles */
+.inputBoxOne,
+.inputBoxTwo,
+.inputBoxThree,
 .inputBoxFour {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Add margin to adjust spacing */
+    margin-bottom: 20px;
 }
 
+.inputBoxOne i,
+.inputBoxTwo i,
+.inputBoxThree i,
 .inputBoxFour i {
     position: absolute;
-    left: 20px; /* Adjust the left position as needed */
-    color: #555; /* Adjust the color as needed */
-    font-size: 2rem; /* Adjust the font size as needed */
+    left: 20px;
+    color: #555;
+    font-size: 2rem;
 }
 
+.inputBoxOne input,
+.inputBoxTwo input,
+.inputBoxThree input,
 .inputBoxFour input {
     box-sizing: border-box;
     border: solid black 3px;
     border-radius: 10px;
     font-size: 2rem;
-    width: 100% ;
-    padding-left: 50px; /* Adjust the padding to leave space for the icon */
+    width: 100%;
+    padding-left: 50px;
 }
 
-.inputBoxFour ::placeholder{
+.inputBoxOne ::placeholder,
+.inputBoxTwo ::placeholder,
+.inputBoxThree ::placeholder,
+.inputBoxFour ::placeholder {
     text-align: center;
     font-size: larger;
     padding-right: 5rem;

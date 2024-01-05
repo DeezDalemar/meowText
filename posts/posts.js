@@ -67,6 +67,17 @@ async function createYourMessages() {
 
    let data = await response.json();
 
+   // Array of placeholder images
+   const placeholderImages = [
+      "../images/he-he-cat.png",
+      "../images/tom.png",
+      "../images/yawning-cat.png",
+      "../images/puss-in-boots.png",
+      "../images/image-removebg-preview (3).png",
+      "../images/image-removebg-preview (4).png",
+      // Add more image URLs as needed
+   ];
+
    for (const post of data) {
       let feed = document.createElement("div");
       feed.className = "feed";
@@ -78,10 +89,13 @@ async function createYourMessages() {
       user.className = "user";
 
       let profilePhoto = document.createElement("div");
-      profilePhoto.className = "profile-photo";
+      profilePhoto.className = "feed-profile-photo";
 
       let profilePFP = document.createElement("img");
-      profilePFP.src = "https://placehold.co/50x50";
+
+      // Randomly select an image from the placeholderImages array
+      const randomImageIndex = Math.floor(Math.random() * placeholderImages.length);
+      profilePFP.src = placeholderImages[randomImageIndex];
 
       let info = document.createElement("div");
       info.className = "info";
