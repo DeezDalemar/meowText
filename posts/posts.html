@@ -12,7 +12,7 @@
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="posts.css" />
 
-    <title>Meow Text</title>
+      <title>MeowText</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="../account/auth.js"></script>
@@ -23,61 +23,66 @@
     </script>
   </head>
 
-  <body>
-    <div class="overlay"></div>
-    <header>
-      <nav>
-        <div class="container">
-          <a href="../index.html">
-            <h2 class="logo">MeowText</h2>
-          </a>
-          <h1>Posts</h1>
-          <div class="log">
-            <button class="btn" onclick="logout()">Sign Out</button>
-            <div class="profile-photo">
-              <img src="#" alt="" />
+   <body>
+      <div class="overlay"></div>
+      <header>
+         <nav>
+            <div class="nav-bar">
+               <!-- Add a class 'posts-link' to the "Posts" link -->
+               <a href="../posts/posts.html" class="posts-link">
+                  <h2>MeowText</h2>
+               </a>
+               <h1>Profile</h1>
+               <div class="log-buttons">
+                  <button class="btn" onclick="logout()">Sign Out</button>
+               </div>
             </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+         </nav>
+      </header>
 
-    <main>
-      <div class="container">
-        <div class="left">
-          <a class="profile" href="../profile/profile.html">
-            <div class="handle">
-              <h4 id="usernameDisplay">Salin Karki</h4>
-              <p id="fullNameDisplay"></p>
+      <main>
+         <div class="container">
+            <!-- Left Sidebar -->
+            <div class="left">
+               <a class="profile" href="../profile/profile.html">
+                  <div class="handle">
+                     <h4 id="usernameDisplay">Salin Karki</h4>
+                     <p id="fullNameDisplay"></p>
+                  </div>
+                  <div class="main-profile-photo">
+                     <img
+                        src="../images/yawning-cat.png"
+                        alt=""
+                     />
+                  </div>
+               </a>
+
+               <div class="sidebar">
+                  <a href="../index.html" class="menu-item">
+                     <h3>Home</h3>
+                  </a>
+                  <a href="../profile/profile.html" class="menu-item">
+                     <h3>Notification</h3>
+                     <img src="../imgs/Notifications_alert_badge_mobile.svg" alt="" class="notification-img" />
+                  </a>
+                  <a href="../profile/profile.html" class="menu-item">
+                     <h3>Messages</h3>
+                  </a>
+                  <a href="../profile/profile.html" class="menu-item">
+                     <h3>Setting</h3>
+                  </a>
+
+                  <button
+                     type="button"
+                     class="btn"
+                     for="find-post"
+                     data-bs-toggle="modal"
+                     data-bs-target="#staticBackdrop"
+                  >
+                     Post
+                  </button>
+               </div>
             </div>
-            <div class="main-profile-photo">
-              <img
-                src="data:image/jpeg;base64,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"
-                alt=""
-              />
-            </div>
-          </a>
-
-          <div class="sidebar">
-            <a class="menu-item">
-              <h3>Home</h3>
-            </a>
-            <a class="menu-item">
-              <h3>Notification</h3>
-              <img src="../imgs/Notifications_alert_badge_mobile.svg" alt="" class="notification-img" />
-            </a>
-            <a class="menu-item">
-              <h3>Messages</h3>
-            </a>
-            <a href="../account/setting.html" class="menu-item">
-              <h3>Setting</h3>
-            </a>
-          </div>
-
-          <button type="button" class="btn" for="find-post" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Post
-          </button>
-        </div>
 
         <div class="middle">
           <form action="" class="create-post">
@@ -92,87 +97,87 @@
           </div>
         </div>
 
-        <div class="right">
-          <div class="messages">
-            <div class="heading">
-              <h4>Messages</h4>
-              <i class="uil uil-edit"></i>
-            </div>
-            <div class="search-bar">
-              <input type="search" placeholder="Search messages" />
-            </div>
-            <!------- MESSAGES CATEGORY ------->
-            <div class="category">
-              <h6 class="active">Primary</h6>
-              <h6 class="message-requests">Request</h6>
-            </div>
-            <!------- MESSAGES ------->
-            <div class="message">
-              <div class="profile-photo">
-                <img src="images/puss.jpg" />
-              </div>
-              <div class="message-body">
-                <h5>Puss in Boots</h5>
-                <p class="text-muted">Let's find the golden egg</p>
-              </div>
-            </div>
-            <!------- MESSAGES ------->
-            <div class="message">
-              <div class="profile-photo">
-                <img src="images/tom-jerry.png" />
-              </div>
-              <div class="message-body">
-                <h5>Tom</h5>
-                <p class="text-muted">Help me catch jerry</p>
-              </div>
-            </div>
-            <!------- MESSAGES ------->
-            <div class="message">
-              <div class="profile-photo">
-                <img src="images/Snowbell.webp" />
-              </div>
-              <div class="message-body">
-                <h5>Snowbell</h5>
-                <p class="text-muted">Good Morning</p>
-              </div>
-            </div>
-          </div>
+            <div class="right">
+               <div class="messages">
+                  <div class="heading">
+                     <h4>Messages</h4>
+                     <i class="uil uil-edit"></i>
+                  </div>
+                  <div class="search-bar">
+                     <input type="search" placeholder="Search messages" />
+                  </div>
+                  <!------- MESSAGES CATEGORY ------->
+                  <div class="category">
+                     <h6 class="active">Primary</h6>
+                     <h6 class="message-requests">Request</h6>
+                  </div>
+                  <!------- MESSAGES ------->
+                  <div class="message">
+                     <div class="profile-photo">
+                        <img src="../images/puss-in-boots.png" />
+                     </div>
+                     <div class="message-body">
+                        <h5>Puss in Boots</h5>
+                        <p class="text-muted">Let's find the golden egg</p>
+                     </div>
+                  </div>
+                  <!------- MESSAGES ------->
+                  <div class="message">
+                     <div class="profile-photo">
+                        <img src="../images/tom.png" />
+                     </div>
+                     <div class="message-body">
+                        <h5>Tom</h5>
+                        <p class="text-muted">Help me catch jerry</p>
+                     </div>
+                  </div>
+                  <!------- MESSAGES ------->
+                  <div class="message">
+                     <div class="profile-photo">
+                        <img src="../images/yawning-cat.png" />
+                     </div>
+                     <div class="message-body">
+                        <h5>Snowbell</h5>
+                        <p class="text-muted">Good Morning</p>
+                     </div>
+                  </div>
+               </div>
 
-          <div class="friend-requests">
-            <h4>Requests</h4>
-            <div class="request">
-              <div class="info">
-                <div class="profile-photo">
-                  <img src="./images/profile-20.jpg" />
-                </div>
-                <div>
-                  <h5>Lorem, ipsum.</h5>
-                  <p class="text-muted">8 mutual friends</p>
-                </div>
-              </div>
-              <div class="action">
-                <button class="btn">Accept</button>
-                <button class="btn">Decline</button>
-              </div>
+               <div class="friend-requests">
+                  <h4>Requests</h4>
+                  <div class="request">
+                     <div class="info">
+                        <div class="profile-photo">
+                           <img src="../images/image-removebg-preview (3).png" />
+                        </div>
+                        <div>
+                           <h5>Lorem, ipsum.</h5>
+                           <p class="text-muted">8 mutual friends</p>
+                        </div>
+                     </div>
+                     <div class="action">
+                        <button class="btn">Accept</button>
+                        <button class="btn">Decline</button>
+                     </div>
+                  </div>
+                  <div class="request">
+                     <div class="info">
+                        <div class="profile-photo">
+                           <img src="../images/image-removebg-preview (4).png" />
+                        </div>
+                        <div>
+                           <h5>Lorem, ipsum.</h5>
+                           <p class="text-muted">2 mutual friends</p>
+                        </div>
+                     </div>
+                     <div class="action">
+                        <button class="btn">Accept</button>
+                        <button class="btn">Decline</button>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="request">
-              <div class="info">
-                <div class="profile-photo">
-                  <img src="./images/profile-18.jpg" />
-                </div>
-                <div>
-                  <h5>Lorem, ipsum.</h5>
-                  <p class="text-muted">2 mutual friends</p>
-                </div>
-              </div>
-              <div class="action">
-                <button class="btn">Accept</button>
-                <button class="btn">Decline</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+         </div>
 
       <div
         class="modal fade modal-open"
@@ -201,7 +206,7 @@
       </div>
     </main>
 
-    <footer></footer>
+      <footer>&copy; 2023 MeowText Media. All rights reserved.</footer>
 
     <!-- Page-specific code -->
 

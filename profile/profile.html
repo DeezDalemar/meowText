@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="profile.css" />
-    <script src="../account/auth.js"></script>
-    <script>
-      if (isLoggedIn() === false) {
-        window.location.replace("../account/login.html");
-      }
-    </script>
-  </head>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>MeowText</title>
+      <link rel="stylesheet" href="../global.css" />
+      <link rel="stylesheet" href="profile.css" />
+      <script src="../account/auth.js"></script>
+      <script>
+         if (isLoggedIn() === false) {
+            window.location.replace("../account/login.html");
+         }
+      </script>
+   </head>
 
-  <body>
-    <header>
-      <nav>
-        <div class="nav-bar">
-          <!-- Add a class 'posts-link' to the "Posts" link -->
-          <a href="../posts/posts.html" class="posts-link">
-            <h2>MeowText</h2>
-          </a>
-          <h1>Profile</h1>
-          <div class="log-buttons">
-            <button class="btn" onclick="logout()">Sign Out</button>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="profile-img">
-        <div class="profile-banner">
-          <img src="" alt="banner-image" />
-        </div>
-        <div class="profile-details">
-          <div class="profile-pic">
-            <img src="../imgs/eye.png" />
-          </div>
-          <div class="user-name">Salin Karki</div>
-        </div>
-        <div class="black-gradient"></div>
-      </div>
-      <div class="main-content">
-        <div class="margins">
-          <div class="profile-tabs">
-            <div class="table">
-              <div class="table-cell">
-                <button onclick="showContent('Notifications')" class="notification btn">
-                  <h3>Notifications</h3>
-                </button>
-                <img src="../imgs/Notifications_alert_badge_mobile.svg" alt="" class="notification-img" />
-              </div>
-              <div class="table-cell">
-                <button onclick="showContent('Post')" class="post btn">
-                  <h3>Post</h3>
-                </button>
-              </div>
-              <div class="table-cell">
-                <button onclick="showContent('Likes')" class="likes btn">
-                  <h3>Likes</h3>
-                </button>
-              </div>
+   <body>
+      <header>
+         <nav>
+            <div class="nav-bar">
+               <!-- Add a class 'posts-link' to the "Posts" link -->
+               <a href="../posts/posts.html" class="posts-link">
+                  <h2>MeowText</h2>
+               </a>
+               <h1>Profile</h1>
+               <div class="log-buttons">
+                  <button class="btn" onclick="logout()">Sign Out</button>
+               </div>
             </div>
-          </div>
-          <br />
-          <div class="container-info">
-            <div class="about-us">
-              <h2>About Us</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
-                ante dapibus diam.
-              </p>
+         </nav>
+      </header>
+      <main>
+         <div class="profile-img">
+            <div class="profile-banner">
+               <img src="../images/Hand Drawn Cute Cute Cat Banner Background Psd, Hand Painted, Cute, Cute Background Image And Wallpaper for Free Download.jpeg" alt="banner-image" />
             </div>
-            <div class="feed-container">
-              <div class="feeds" id="feeds" style="background-color: whitesmoke"></div>
+            <div class="profile-details">
+               <div class="profile-pic">
+                  <img src="../images/puss-in-boots.png" />
+               </div>
+               <div class="user-info">
+                  <h1 class="user-name"></h1>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script src="profile.js"></script>
-    <script src="../account/auth.js"></script>
-  </body>
+            <div class="black-gradient"></div>
+         </div>
+         <div class="main-content">
+            <div class="margins">
+               <div class="profile-tabs">
+                  <div class="table">
+                     <div class="table-cell">
+                        <button onclick="showContent('Notifications')">Notifications</button>
+                     </div>
+                     <div class="table-cell">
+                        <button onclick="showContent('Post')">Post</button>
+                     </div>
+                     <div class="table-cell">
+                        <button onclick="showContent('Likes')">Likes</button>
+                     </div>
+                  </div>
+               </div>
+               <br />
+               <div class="container-info">
+                  <div class="about-us">
+                     <h2>Bio</h2>
+                     <br />
+                     <p id="bioTextDisplay"></p>
+                  </div>
+                  <div class="feed-container">
+                     <div class="feeds" id="feeds" style="background-color: whitesmoke"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer>&copy; 2023 MeowText Media. All rights reserved.</footer>
+      <script src="profile.js"></script>
+      <script src="../account/auth.js"></script>
+   </body>
 </html>
