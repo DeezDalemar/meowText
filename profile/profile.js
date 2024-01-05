@@ -20,7 +20,7 @@ async function displayInfo() {
    );
    let data = await response.json();
 
-  userName.innerText = data.fullName;
+  userName.innerText = data.fullName + "\n" + data.username;
   bioTextDisplay.innerText = data.bio;
 }
 
