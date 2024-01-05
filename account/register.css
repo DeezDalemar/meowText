@@ -28,7 +28,9 @@ main {
     background-color: whitesmoke;
     border-radius: 15px;
     font-size: 15px;
-    max-width: 35%;
+    width: 40rem;
+    max-width: 40%;
+    min-width: 35rem;
 }
 
 h1 {
@@ -75,11 +77,12 @@ label {
 }
 
 input{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    margin-left: 3rem;
     border: solid black 3px;
     border-radius: 10px;
     font-size: 2rem;
-    width: 85%; /* Take up the full width of the parent container */
+    max-width: 85%; /* Take up the full width of the parent container */
 }
 
 input::placeholder {
@@ -100,6 +103,7 @@ input::placeholder {
     left: 20px; /* Adjust the left position as needed */
     color: #555; /* Adjust the color as needed */
     font-size: 2rem; /* Adjust the font size as needed */
+    margin-left: 3rem;
 }
 
 .inputBoxOne input {
@@ -129,6 +133,7 @@ input::placeholder {
     left: 20px; /* Adjust the left position as needed */
     color: #555; /* Adjust the color as needed */
     font-size: 2rem; /* Adjust the font size as needed */
+    margin-left: 3rem;
 }
 
 .inputBoxTwo input {
@@ -158,6 +163,7 @@ input::placeholder {
     left: 20px; /* Adjust the left position as needed */
     color: #555; /* Adjust the color as needed */
     font-size: 2rem; /* Adjust the font size as needed */
+    margin-left: 3rem;
 }
 
 .inputBoxThree input {
@@ -187,6 +193,8 @@ input::placeholder {
     left: 20px; /* Adjust the left position as needed */
     color: #555; /* Adjust the color as needed */
     font-size: 2rem; /* Adjust the font size as needed */
+   
+    margin-left: 3rem;
 }
 
 .inputBoxFour input {
@@ -202,4 +210,13 @@ input::placeholder {
     text-align: center;
     font-size: larger;
     padding-right: 5rem;
+}
+
+
+/* Increase the font-size for the icons */
+.gg-profile,
+.gg-user,
+.gg-lock-unlock,
+.gg-lock {
+    font-size: 4rem !important; /* Adjust the size as needed */
 }
