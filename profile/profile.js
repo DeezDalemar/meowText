@@ -2,6 +2,7 @@
 
 const feedsContainer = document.querySelector("#feeds");
 const userName = document.querySelector(".user-name");
+const bioTextDisplay = document.querySelector("#bioTextDisplay")
 
 let totalLikes = 0;
 
@@ -19,7 +20,8 @@ async function displayInfo() {
    );
    let data = await response.json();
 
-   userName.innerText = data.fullName;
+  userName.innerText = data.fullName + "\n" + data.username;
+  bioTextDisplay.innerText = data.bio;
 }
 
 function timeAgo(timestamp) {
@@ -68,7 +70,7 @@ const randomMessages = [
    "have you done your spanish lessons -duolingo",
   "125.178.149.108",
   "We've noticed that you recently have been shopping for ''fursuits'' we'll now reccomend these to you.",
-  
+
    
 ];
 
