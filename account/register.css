@@ -27,10 +27,8 @@ main {
     padding: 25px;
     background-color: whitesmoke;
     border-radius: 15px;
-    font-size: 15px;
-    width: 40rem;
-    max-width: 40%;
-    min-width: 35rem;
+    font-size: 0.5rem;
+    max-width: 35%;
 }
 
 h1 {

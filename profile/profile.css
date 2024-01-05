@@ -19,6 +19,10 @@ body {
   max-width: auto;
 }
 
+h2{
+  color: #362e55;
+}
+
 /* Profile Photo Styles */
 .profile-photo {
   display: block;
@@ -305,6 +309,7 @@ img {
    border-radius: 10px;
    max-height: 30rem;
    overflow-y: scroll;
+   
 }
 
 #profile-content{
@@ -327,6 +332,7 @@ img {
    font-size: 0.85rem;
    line-height: 1.5;
    max-width: 55rem;
+   overflow-wrap: break-word;
 }
 
 .feed .head {
@@ -341,6 +347,7 @@ img {
 
 .feed .photo {
    margin: 0.7rem 0;
+   
 }
 
 .liked-by {
@@ -355,4 +362,9 @@ img {
    overflow: hidden;
    border: 2px solid #e1deed;
    margin-left: -0.6rem;
+}
+
+.user-name{
+  margin-top: -2rem;
+  color: #362e55;
 }
