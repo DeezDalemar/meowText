@@ -1,4 +1,4 @@
-/* Posts Page CSS */
+/* Reset Styles */
 * {
    margin: 0;
    padding: 0;
@@ -9,37 +9,35 @@
    border: none;
 }
 
+/* Body Styles */
 body {
    font-family: "Poppins", sans-serif;
    color: #544785;
    background: #e8e7e9;
    overflow-x: hidden;
-   
 }
 
+/* Container Styles */
 .container {
    width: 80%;
    margin: 0 8rem;
 }
 
-.profile-photo {
+/* Profile Photo Styles */
+.feed-profile-photo, .profile-photo, .main-profile-photo {
    margin-left: 1rem;
    width: 2.8rem;
    border-radius: 50%;
    overflow: hidden;
 }
-.main-profile-photo {
-   margin-left: 1rem;
-   width: 3.5rem;
-   border-radius: 50%;
-   overflow: hidden;
-}
 
+/* Image Styles */
 img {
    display: block;
    width: 100%;
 }
 
+/* Button Styles */
 .btn {
    display: inline-block;
    padding: 0.6rem 2rem;
@@ -55,6 +53,7 @@ img {
    opacity: 0.8;
 }
 
+/* Text Styles */
 .text-bold {
    font-weight: 500;
 }
@@ -63,33 +62,13 @@ img {
    color: #9e98b3;
 }
 
-nav {
-   width: 100%;
-   background: #b090d0;
-   padding: 0.7rem 0;
-   position: fixed;
-   top: 0;
-   z-index: 10;
-}
-
-nav .container {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-}
-
-nav .create {
-   display: flex;
-   align-items: center;
-   gap: 2rem;
-}
-
-/* =============== Main ============== */
+/* Main Section Styles */
 main {
    position: relative;
    top: 5.4rem;
 }
 
+/* Main Container Styles */
 main .container {
    display: grid;
    grid-template-columns: 18vw auto 20vw;
@@ -97,13 +76,14 @@ main .container {
    position: relative;
 }
 
-/* =============== Left ============== */
+/* Left Section Styles */
 main .container .left {
    height: max-content;
    position: sticky;
    top: 5.4rem;
 }
 
+/* Left Profile Styles */
 main .container .left .profile {
    padding: 2rem;
    background: white;
@@ -115,7 +95,7 @@ main .container .left .profile {
    color: #544785;
 }
 
-/* =============== Sidebar ============== */
+/* Sidebar Styles */
 .left .sidebar {
    margin-top: 1rem;
    background: white;
@@ -131,14 +111,12 @@ main .container .left .profile {
    position: relative;
 }
 
-.menu-item:hover{
+.menu-item:hover {
    background-color: #544785;
    border-radius: 2rem;
    color: whitesmoke;
    text-decoration: none;
 }
-
-
 
 .left .sidebar i {
    font-size: 1.4rem;
@@ -160,7 +138,7 @@ main .container .left .profile {
    margin-bottom: 0.7rem;
 }
 
-/* =============== Create Post ============== */
+/* Create Post Styles */
 .middle .create-post {
    width: 100%;
    display: flex;
@@ -172,7 +150,7 @@ main .container .left .profile {
    border-radius: 2rem;
 }
 
-/* =============== Feeds ============== */
+/* Feed Styles */
 .middle .feeds .feed {
    background: white;
    border-radius: 2rem;
@@ -211,14 +189,14 @@ main .container .left .profile {
    margin-left: -0.6rem;
 }
 
-/* =============== Right ============== */
+/* Right Section Styles */
 main .container .right {
    height: max-content;
    position: sticky;
    top: 5.4rem;
 }
 
-/* =============== Messages ============== */
+/* Messages Styles */
 .right .messages {
    background: rgb(255, 255, 255);
    border-radius: 1rem;
@@ -263,7 +241,7 @@ main .container .right {
    align-items: start;
 }
 
-/* =============== Friend Requests ============== */
+/* Friend Requests Styles */
 .right .friend-requests {
    margin-top: 1rem;
 }
@@ -293,40 +271,32 @@ main .container .right {
    gap: 1rem;
 }
 
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
+/* General Styles */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
    display: block;
 }
+
 a {
    background-color: transparent;
 }
+
 html {
    font-size: 10px;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
    color: #23527c;
    text-decoration: underline;
 }
+
 a:focus {
    outline: thin dotted;
    outline: 5px auto -webkit-focus-ring-color;
    outline-offset: -2px;
 }
+
+/* Modal Styles */
 .close {
    float: right;
    font-size: 21px;
@@ -337,23 +307,26 @@ a:focus {
    opacity: 0.2;
    filter: alpha(opacity=20);
 }
-.close:hover,
-.close:focus {
+
+.close:hover, .close:focus {
    color: #000000;
    text-decoration: none;
    cursor: pointer;
    opacity: 0.5;
    filter: alpha(opacity=50);
 }
+
 button.close {
    padding: 0;
    cursor: pointer;
    background: transparent;
    border: 0;
 }
+
 .modal-open {
    overflow: hidden;
 }
+
 .modal {
    display: none;
    overflow: hidden;
@@ -366,6 +339,7 @@ button.close {
    -webkit-overflow-scrolling: touch;
    outline: 0;
 }
+
 .modal.fade .modal-dialog {
    -webkit-transform: translate(0, -25%);
    -ms-transform: translate(0, -25%);
@@ -376,21 +350,25 @@ button.close {
    transition: transform 0.3s ease-out;
    margin-top: 7rem;
 }
+
 .modal.in .modal-dialog {
    -webkit-transform: translate(0, 0);
    -ms-transform: translate(0, 0);
    -o-transform: translate(0, 0);
    transform: translate(0, 0);
 }
+
 .modal-open .modal {
    overflow-x: hidden;
    overflow-y: auto;
 }
+
 .modal-dialog {
    position: relative;
    width: auto;
    margin: 10px;
 }
+
 .modal-content {
    position: relative;
    background-color: #ffffff;
@@ -403,6 +381,7 @@ button.close {
    background-clip: padding-box;
    outline: 0;
 }
+
 .modal-backdrop {
    position: fixed;
    top: 0;
@@ -412,45 +391,56 @@ button.close {
    z-index: 1040;
    background-color: #000000;
 }
+
 .modal-backdrop.fade {
    opacity: 0;
    filter: alpha(opacity=0);
 }
+
 .modal-backdrop.in {
    opacity: 0.5;
    filter: alpha(opacity=50);
 }
+
 .modal-header {
    padding: 15px;
    border-bottom: 1px solid #e5e5e5;
    min-height: 16.42857143px;
 }
+
 .modal-header .close {
    margin-top: -2px;
 }
+
 .modal-title {
    margin: 0;
    line-height: 1.42857143;
 }
+
 .modal-body {
    position: relative;
    padding: 15px;
 }
+
 .modal-footer {
    padding: 15px;
    text-align: right;
    border-top: 1px solid #e5e5e5;
 }
+
 .modal-footer .btn + .btn {
    margin-left: 5px;
    margin-bottom: 0;
 }
+
 .modal-footer .btn-group .btn + .btn {
    margin-left: -1px;
 }
+
 .modal-footer .btn-block + .btn-block {
    margin-left: 0;
 }
+
 .modal-scrollbar-measure {
    position: absolute;
    top: -9999px;
@@ -458,9 +448,11 @@ button.close {
    height: 50px;
    overflow: scroll;
 }
+
 .clickable {
    cursor: pointer;
 }
+
 @media (min-width: 768px) {
    .modal-dialog {
       width: 600px;
@@ -474,56 +466,14 @@ button.close {
       width: 300px;
    }
 }
+
 @media (min-width: 992px) {
    .modal-lg {
       width: 900px;
    }
 }
-.clearfix:before,
-.clearfix:after,
-.modal-footer:before,
-.modal-footer:after {
-   content: " ";
-   display: table;
-}
-.clearfix:after,
-.modal-footer:after {
-   clear: both;
-}
-.center-block {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
-.pull-right {
-   float: right !important;
-}
-.pull-left {
-   float: left !important;
-}
-.hide {
-   display: none !important;
-}
-.show {
-   display: block !important;
-}
-.invisible {
-   visibility: hidden;
-}
-.text-hide {
-   font: 0/0 a;
-   color: transparent;
-   text-shadow: none;
-   background-color: transparent;
-   border: 0;
-}
-.hidden {
-   display: none !important;
-}
-.affix {
-   position: fixed;
-}
 
+/* Overlay Styles */
 .overlay {
    position: fixed;
    top: 0;
@@ -539,18 +489,19 @@ button.close {
    display: block;
 }
 
+/* Post Input Styles */
 #postInput {
    background-color: whitesmoke;
    border: 1px solid #544785;
    font-family: Poppins, sans-serif;
 }
 
+/* Button Styles */
 button {
    color: whitesmoke;
 }
 
-/* styles.css */
-
+/* Heart Icon Container Styles */
 .heart-icon-container {
    bottom: 8px;
    right: 8px;
@@ -558,18 +509,50 @@ button {
    margin-right: 1rem;
 }
 
+/* Heart Icon Styles */
 .heart-icon {
    width: 1rem;
    height: 1rem;
 }
 
+/* Post Image Styles */
 .postImg {
    width: 20rem;
    margin-left: 17rem;
 }
 
-.notification-img{
+/* Notification Image Styles */
+.notification-img {
    width: 1rem;
    margin-left: 0.1rem;
    margin-bottom: 0.5rem;
+}
+
+/* Navigation Bar Styles */
+.nav-bar {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Navigation Styles */
+nav {
+  width: 100%;
+  background: #b090d0;
+  padding: 0.7rem 0;
+  top: 0;
+  z-index: 10;
+}
+
+/* Navigation Bar Styles */
+nav .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Login Buttons Styles */
+nav .log-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }

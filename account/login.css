@@ -1,21 +1,19 @@
-
 body {
-    color: #544785;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 3rem;
     background-color: #b090d0;
-    margin: 0; /* Reset default margin */
+    margin: 0;
     color: #544785;
 }
 
-h3{
+h3 {
     font-size: xxx-large;
 }
 
-label{
+label {
     font-size: 2.5rem;
 }
 
@@ -44,22 +42,38 @@ input {
     margin: 0 auto;
 }
 
-#loginButton{
+#loginButton {
     margin-top: 20px;
     display: inline-block;
-   padding: 0.6rem 2rem;
-   border: 2px solid black;
-   font-weight: 500;
-   border-radius: 2rem;
-   cursor: pointer;
-   transition: all 300ms ease;
-   font-size: 1rem;
+    padding: 0.6rem 2rem;
+    border: 2px solid black;
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 1rem;
     background-color: #e5e3ec;
 }
 
-#loginPageRegisterAnchor{
+#loginPageRegisterAnchor {
     font-size: x-large;
-     margin: 50px;
+    margin: 50px;
+}
+
+#teamMeowTextLogo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    
+
+
+}
+
+#teamMeowTextLogo img {
+    max-width: 100%; 
+    height: auto;
+    max-height: 150px;
+    margin-bottom: 3.5rem; 
 }
 
 #teamMeowTextLogo{
@@ -83,61 +97,35 @@ input {
     padding-bottom: .5rem;
 }
 
-
-.inputBoxOne {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin to adjust spacing */
-}
-
-.inputBoxOne i {
-    position: absolute;
-    left: 20px; /* Adjust the left position as needed */
-    color: #555; /* Adjust the color as needed */
-    font-size: 2rem; /* Adjust the font size as needed */
-}
-
-.inputBoxOne input {
-    box-sizing: border-box;
-    border: solid black 3px;
-    border-radius: 10px;
-    font-size: 2rem;
-    width: 100% ;
-    padding-left: 50px; /* Adjust the padding to leave space for the icon */
-}
-
-.inputBoxOne ::placeholder{
-    text-align: center;
-    font-size: larger;
-    padding-right: 5rem;
-}
-
-
+.inputBoxOne,
 .inputBoxTwo {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 20px;
 }
 
+.inputBoxOne i,
 .inputBoxTwo i {
     position: absolute;
-    left: 20px; /* Adjust the left position as needed */
-    color: #555; /* Adjust the color as needed */
-    font-size: 500rem; /* Adjust the font size as needed */
+    left: 20px;
+    color: #555;
+    font-size: 2rem;
 }
 
+.inputBoxOne input,
 .inputBoxTwo input {
     box-sizing: border-box;
     border: solid black 3px;
     border-radius: 10px;
     font-size: 2rem;
     width: 100%;
-    padding-left: 50px; /* Adjust the padding to leave space for the icon */
+    padding-left: 50px;
 }
 
-.inputBoxTwo ::placeholder{
+.inputBoxOne ::placeholder,
+.inputBoxTwo ::placeholder {
     text-align: center;
     font-size: larger;
     padding-right: 5rem;
@@ -166,15 +154,3 @@ input {
         padding: 2%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
